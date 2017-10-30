@@ -1,0 +1,1 @@
+find ./ -name '*.py' -exec enscript -2 -q -C --pretty-print --color -f Courier8 -r -p print_pretty.ps {} +

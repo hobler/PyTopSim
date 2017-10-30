@@ -1,0 +1,133 @@
+\section{Diffusion}
+
+\begin{equation}
+\frac{\partial\Theta}{\partial t} = A[(1-\Theta)\cdot f_{pc} \cdot s - \Theta\cdot f_r\cdot n_r] + D\frac{\partial^2\Theta}{\partial x^2}
+\end{equation}
+
+\subsection{Diffusion 2D}
+Au\ss erhalb des Gebietes: $f_r = 0$
+
+\begin{equation}
+D\frac{\partial^2 \Theta}{\partial x^2} + k(1-\Theta) = 0 \hspace{0.5cm} k = A\cdot f_{pc} \cdot s
+\end{equation}
+
+Ansatz:
+
+\begin{equation}
+\Theta = 1 - exp(-a\cdot x)
+\end{equation}
+
+\begin{equation}
+\frac{\partial\Theta}{\partial x} = +a\cdot exp(-a\cdot x)
+\end{equation}
+
+\begin{equation}
+\frac{\partial^2\Theta}{\partial x^2} = -a^2\cdot exp(-a\cdot x)
+\end{equation}
+
+\begin{equation}
+-D\cdot a^2 \cdot exp(-a \cdot x) + k\cdot exp(-a \cdot x) = 0 \Rightarrow k = D\cdot a^2 \Rightarrow a = -\sqrt{\frac{k}{D}}
+\end{equation}
+
+\begin{equation}
+\Theta = 1 - exp(-\sqrt{\frac{k}{D}}\cdot x)
+\end{equation}
+
+\begin{equation}
+\frac{d\Theta}{dx} = - \sqrt{\frac{k}{D}}\cdot exp(-\sqrt{\frac{k}{D}}\cdot x) = -\sqrt{\frac{k}{D}}\cdot (1-\Theta(x))
+\end{equation}
+
+Relation zwischen Strom aus DGL und Strom auf finiten Differenzen:
+\begin{equation}
+-\sqrt{\frac{k}{D}}\cdot (1-\Theta(x)) = \frac{\Theta_0 - \Theta_{-1}}{h_{-1}} \hspace{0.5cm}\Theta(x) =  \frac{\Theta_0 + \Theta_{-1}}{2}
+\end{equation}
+
+\begin{equation}
+\Theta_{-1} = \frac{1}{(\frac{1}{2}+\frac{D}{k}\cdot \frac{1}{h_{-1}})} - \frac{\frac{1}{2}\cdot \sqrt{\frac{k}{D}} - \frac{1}{h_{-1}}}{\frac{1}{2}\cdot \sqrt{\frac{k}{D}} + \frac{1}{h_{-1}}}\cdot \Theta_0
+\end{equation}
+
+\subsection{Diffusion 3D}
+
+\begin{equation}
+\frac{\partial \Theta}{\partial t} = D\nabla\Theta + k(1-\Theta)
+\end{equation}
+
+station\"ar:\\
+
+\begin{equation}
+D\nabla\Theta + k(1-\Theta) = 0
+\end{equation}
+
+\begin{equation}
+\Theta' = 1 - \Theta:
+\end{equation}
+
+\begin{equation}
+-D\nabla\Theta' + k\Theta' = 0
+\end{equation}
+
+\begin{equation}
+D\nabla\Theta' - k\Theta' = 0
+\end{equation}
+
+in Zylinderkoordinaten:\\
+
+\begin{equation}
+D\frac{1}{r}\frac{\partial}{\partial r}(r\frac{\partial \Theta'}{\partial r}) - k\Theta'  = 0
+\end{equation}
+
+\begin{equation}
+D\frac{1}{r}\left[\frac{\partial\Theta'}{\partial r} + r\frac{\partial^2\Theta'}{\partial r^2}\right] - k\Theta' = 0 \hspace{0.5cm} |\cdot r^2/D
+\end{equation}
+
+Bessel DGL:
+
+\begin{equation}
+r\frac{\partial\Theta'}{\partial r} + r^2\frac{\partial^2\Theta'}{\partial r^2} - \frac{k}{D}r^2\Theta' = 0
+\end{equation}
+
+\begin{equation}
+\frac{k}{D}r^2 = \rho^2 \hspace{0.5cm} \rho = \sqrt{\frac{k}{D}}r
+\end{equation}
+
+\begin{equation}
+\rho\frac{\partial\Theta'}{\partial \rho} + \rho^2\frac{\partial^2\Theta'}{\partial \rho^2} - \rho^2\Theta' = 0
+\end{equation}
+
+L\"osungen der DGL sind modifizierte Bessel Funktionen: \begin{math} I_0(\rho), K_0(\rho) \end{math}. F\"ur \begin{math} \rho \to \infty: I_0(\rho) \to \infty, K_0(\rho) \to 0 \Rightarrow nur~ \Theta' = K_0(\rho) \end{math} eine L\"osung.
+
+\begin{equation}
+\Theta = 1 - C\cdot K_0(\sqrt{\frac{k}{D}\cdot r}) \hspace{0.5cm} C = const
+\end{equation}
+
+\begin{equation}
+C = \frac{1-\Theta}{K_0(\sqrt{\frac{k}{D}}\cdot r)}
+\end{equation}
+
+Ableitung der modifizierten Bessel Funktion:
+\begin{equation}
+\frac{\partial K_0(x)}{\partial X} = - K_1(x)
+\end{equation}
+
+\begin{equation}
+\frac{\partial \Theta}{\partial r} = \sqrt{\frac{k}{D}}\cdot C \cdot K_1(\sqrt{\frac{k}{D}}\cdot r)
+\end{equation}
+
+\begin{equation}
+\frac{\partial \Theta}{\partial r} = \sqrt{\frac{k}{D}} \frac{(1-\Theta)\cdot K_1(\sqrt{\frac{k}{D}}\cdot r)}{K_0(\sqrt{\frac{k}{D}}\cdot r)}
+\end{equation}
+
+relation between current from pde and current from finite differences:
+
+\begin{equation}
+\frac{\Theta_0 - \Theta_{-1}}{h_{-1}} = \sqrt{\frac{k}{D}} \frac{(1-\Theta(x))\cdot K_1(\sqrt{\frac{k}{D}}\cdot r)}{K_0(\sqrt{\frac{k}{D}}\cdot r)}
+\end{equation}
+
+\begin{equation}
+\Theta(x) = \frac{\Theta_0 + \Theta_{-1}}{2}
+\end{equation}
+
+\begin{equation}
+\Theta_0  = \Theta_0 \frac{\frac{K_2(\sqrt{\frac{k}{D}}\cdot r)}{h_{-1}} + \frac{\sqrt{\frac{k}{D}}\cdot K_1(\sqrt{\frac{k}{D}}\cdot r)}{2}}{\frac{K_2(\sqrt{\frac{k}{D}}\cdot r)}{h_{-1}} - \frac{\sqrt{\frac{k}{D}}\cdot K_1(\sqrt{\frac{k}{D}}\cdot r)}{2}} - \frac{\sqrt{\frac{k}{D}}\cdot K_1(\sqrt{\frac{k}{D}}\cdot r)}{\frac{K_2(\sqrt{\frac{k}{D}}\cdot r)}{h_{-1}} + \frac{\sqrt{\frac{k}{D}}\cdot K_1(\sqrt{\frac{k}{D}}\cdot r)}{2}}
+\end{equation}
+

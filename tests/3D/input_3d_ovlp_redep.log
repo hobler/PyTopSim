@@ -1,0 +1,131 @@
+TopSim                                                  Thu Jan 31 12:52:16 2013
+
+Configuration parameters:
+
+[Include]
+INCLUDE_FILE = 'input_3d.cfg'
+
+[Setup]
+ANGLE_BISECTOR = False
+DEPOSITION = False
+DIMENSIONS = 3
+ETCHING = False
+INTERPOLATE = True
+ISOTROPIC = False
+REDEP_1 = True
+REDEP_2 = False
+SHADOWING = False
+SPUTTER_2 = False
+SURFACE_TYPE = 'rectilinear'
+
+[Initial Conditions]
+DELTA_X = 1.0
+DELTA_Y = 1.0
+SURFACE_FILE = ''
+XMAX = 35.
+XMIN = -35.
+YMAX = 50.
+YMIN = -20.
+
+[Regions]
+DOMAINS = {'Si': 'everything',
+}
+NUMBER_OF_REGIONS = 1
+PRIMITIVES = {'everything': ('all',()),
+}
+REGIONS = float('-inf'), float('inf')
+
+[Beam]
+CENTER = (0.0, 0.0)
+CURRENT = 2.5e-15
+DIMENSIONS = 2
+DIVERGENCE = (0.0, 0.0)
+ERF_BEAM_WIDTH = (1e-10, 1e-10)
+FWHM = (10.0, 10.0)
+TILT = 0.
+TOTAL_TIME = 20.0
+TYPE = 'Gaussian'
+
+[Scan]
+DWELL_TIME = 1e1
+OVERLAP = True
+OVERLAP_Y = False
+PASSES = 1
+PIXEL_FILE = ''
+PIXEL_SPACING = (20.0, 20.0)
+PIXELS = (1, 2)
+SCAN_WIDTH = (1.0, 1.0)
+TYPE = 'raster'
+Y_OVERSCAN = 0
+
+[Numerics]
+ADAPTIVE_GRID = False
+GRID_LAZINESS = 10.
+GRID_REGIONS = ((-500.,-150.,500.,120.),)    #2D ((minx,maxy),) 3D ((minx,miny,maxx,maxy),)
+MAX_POINTS = 10000000
+MAX_SEGLEN = 22.,22.
+MIN_DELTA = 1.0,2.0
+TIME_STEP = 1.25e-1
+
+[Physics]
+A_PC = 1.0
+BACKSCATTER_ANG_DIST_FILES = ('',)
+BACKSCATTER_YIELD_FILES = ('',)
+D_COEFF = 1.0
+DENSITIES = (50.02,)
+DIFFUSION = False
+F_PC = 1.0
+MATERIAL_NAMES = 'Si',
+N = 1.0 #cos^n alpha (sputtered atoms)
+N_DEP = 0.5
+N_ETCH = 0.5
+N_PC = 17.0
+S = 1.0 #redeposition sticking coefficient
+S_PC = 1.0
+S_YIELD = 0.0
+SPUTTER_ANG_DIST_FILES = ('',)
+SPUTTER_YIELD_FILES = ('gasi30/syield.npz',)
+TABLE_DIRECTORIES = ('',)
+
+[Output]
+DISPLAY_SURFACE = True
+LOG_FILE = True
+SAVE_ALL = False
+SAVE_ANGLES = False
+SAVE_BEAM_FLUXES = False
+SAVE_BINARY = False
+SAVE_FLUXES = False
+SAVE_MATERIAL_NAMES = False
+SAVE_POSITIONS = True
+SAVE_PRECURSOR = False
+SURFACE_FILE = input_3d_ovlp_redep.srf
+VERBOSE = False
+WRITE_TIME_STEP = 1.E-0
+
+Simulation Output:
+
+time zmin zmax = 0.0 0.0 0.0
+time zmin zmax = 0.0 0.0 0.0
+time zmin zmax = 1.0 -2.74173643582 2.67801449955e-08
+time zmin zmax = 2.0 -5.24656773048 2.37815339196e-07
+time zmin zmax = 3.0 -7.46362210366 8.33264645421e-07
+time zmin zmax = 4.0 -9.45634566299 2.02152969244e-06
+time zmin zmax = 5.0 -11.2857076458 4.02369501011e-06
+time zmin zmax = 6.0 -12.9904918254 7.07803756538e-06
+time zmin zmax = 7.0 -14.5947588765 1.14436808208e-05
+time zmin zmax = 8.0 -16.1143506101 1.74036532313e-05
+time zmin zmax = 9.0 -17.559635338 2.52675487069e-05
+time zmin zmax = 10.0 -18.9374262227 3.53729961078e-05
+time zmin zmax = 11.0 -20.2521063978 4.81211489269e-05
+time zmin zmax = 12.0 -21.5064305142 6.40135226587e-05
+time zmin zmax = 13.0 -22.7026700704 8.34147468801e-05
+time zmin zmax = 14.0 -23.8432470607 0.000106733736592
+time zmin zmax = 15.0 -24.9306001902 0.000134400487171
+time zmin zmax = 16.0 -25.9679877867 0.000166842633921
+time zmin zmax = 17.0 -26.960245613 0.000204471190453
+time zmin zmax = 18.0 -27.9141408851 0.000247690798161
+time zmin zmax = 19.0 -28.8339414658 0.000296892094037
+time zmin zmax = 20.0 -29.719691878 0.000352671154331
+time zmin zmax = 20.0 -29.719691878 0.000352671154331
+
+CPU time: 910.13

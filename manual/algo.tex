@@ -1,0 +1,235 @@
+\section{visibility}
+Calculate view factor:
+\begin{equation}
+2D:~\frac{f_{2D}(\alpha)\times cos\beta}{d} dl 
+\end{equation}
+
+\begin{equation}
+3D:~\frac{f_{3D}(\alpha,\phi)\times cos\beta}{d^2} dA 
+\end{equation}
+
+\section{precursor coverage}
+TODO: use new area with new precursor coverage. otherwise change in area of surface elements is not considered.
+
+\begin{equation}
+\frac{\partial\Theta}{\partial t} = A_{pc}[(1-\Theta)f_{pc}s-\Theta f_rn_r] + D\frac{\partial^2\Theta}{\partial x^2}
+\end{equation}
+
+Neglecting the diffusion the precursor coverage for the next step is given by:
+\begin{equation}
+\Theta_{new} = \frac{A_{pc} f_{pc} s + \frac{\Theta_{old}}{dt}}{\frac{1}{dt} + A_{pc} f_{pc} s + f_r n_r}
+\end{equation}
+
+\section{precursor diffusion}
+\subsection{2D}
+finite differences for unequal spaced lattice:
+
+\begin{equation}
+\frac{\partial^2 f}{\partial x^2} = \frac{2}{h_j + h_{j+1}}\left[\frac{f_{j+1} - f_j}{h_{j+1}} - \frac{f_j - f_{j-1}}{h_j}\right]
+\end{equation}
+
+\begin{equation}
+\Theta_i\left(\frac{1}{\Delta t} + Af_{pc}s + An_rf_{r,i} + \frac{2D}{h_{i-1}h_i}\right) - \Theta_{i-1}\frac{2D}{(h_{i-1}+h_i)h_{i-1}} - \Theta_{i+1}\frac{2D}{(h_{i-1}+h_i)h_i} = \frac{\Theta_i^ {alt}}{\Delta t} + Af_{pc}s
+\end{equation}
+
+\subsubsection{boundary conditions}
+Outside of region $f_r = 0$
+
+\begin{equation}
+D\frac{\partial^2 \Theta}{\partial x^2} + k(1-\Theta) = 0 \hspace{0.5cm} k = A\cdot f_{pc} \cdot s
+\end{equation}
+
+Ansatz:
+
+\begin{equation}
+\Theta = 1 - exp(-a\cdot x)
+\end{equation}
+
+\begin{equation}
+\frac{\partial\Theta}{\partial x} = +a\cdot exp(-a\cdot x)
+\end{equation}
+
+\begin{equation}
+\frac{\partial^2\Theta}{\partial x^2} = -a^2\cdot exp(-a\cdot x)
+\end{equation}
+
+\begin{equation}
+-D\cdot a^2 \cdot exp(-a \cdot x) + k\cdot exp(-a \cdot x) = 0 \Rightarrow k = D\cdot a^2 \Rightarrow a = -\sqrt{\frac{k}{D}}
+\end{equation}
+
+\begin{equation}
+\Theta = 1 - exp(-\sqrt{\frac{k}{D}}\cdot x)
+\end{equation}
+
+\begin{equation}
+\frac{d\Theta}{dx} = - \sqrt{\frac{k}{D}}\cdot exp(-\sqrt{\frac{k}{D}}\cdot x) = -\sqrt{\frac{k}{D}}\cdot (1-\Theta(x))
+\end{equation}
+
+Relation between current from PDE and current from finite differences:
+\begin{equation}
+-\sqrt{\frac{k}{D}}\cdot (1-\Theta(x)) = \frac{\Theta_0 - \Theta_{-1}}{h_{-1}} \hspace{0.5cm}\Theta(x) =  \frac{\Theta_0 + \Theta_{-1}}{2}
+\end{equation}
+
+\begin{equation}
+\Theta_{-1} = \frac{1}{(\frac{1}{2}+\frac{D}{k}\cdot \frac{1}{h_{-1}})} - \frac{\frac{1}{2}\cdot \sqrt{\frac{k}{D}} - \frac{1}{h_{-1}}}{\frac{1}{2}\cdot \sqrt{\frac{k}{D}} + \frac{1}{h_{-1}}}\cdot \Theta_0
+\end{equation}
+
+\subsection{3D}
+\begin{equation}
+D\int_{A_{ij}}~div~gradC~dA = \int_{A_{ij}}~\frac{\partial C}{\partial t}
+\end{equation}
+
+\begin{equation}
+D\int~gradC~d\vec{s} = \frac{\partial C}{\partial t}~A_{ij}
+\end{equation}
+
+Surface element is approximated by parallelogram in tangential plane (normal to surface normal vector). The projection of this surface element is the axe-parallel rectangle assigned to point i,j.\\
+
+Contribution to integral:\\
+\begin{equation}
+\vec{J_{i+1,j}}*\vec{n_{i+1,j}}*\frac{1}{2}|\vec{x_{i,j+1}}-\vec{x_{i,j-1}}|
+\end{equation}
+with
+\begin{equation}
+\vec{J_{i+1,j}} = -D\frac{C_{i+1,j}-C_{i,j}}{|\vec{x_{i+1,j}} - \vec{x_{i,j}}|}\vec{e_{i+1,j}}'
+\end{equation}
+and 
+\begin{equation}
+\vec{e_{i+1,j}}' = \frac{\vec{x_{i+1,j}} - \vec{x_{i,j}}}{|\vec{x_{i+1,j}} - \vec{x_{i,j}}|}
+\end{equation}
+gives:
+\begin{equation}
+\vec{J_{i+1,j}} = -D\frac{C_{i+1,j}-C_{i,j}}{|\vec{x_{i+1,j}} - \vec{x_{i,j}}|^2}(\vec{x_{i+1,j}} - \vec{x_{i,j}})
+\end{equation}\\
+
+
+Geometric properties for flux density in each direction in Code:\\
+$\vec{v_1}=\vec{x_{i,j-1}} - \vec{x_{i,j}}$\\
+$\vec{v_2}=\vec{x_{i-1,j}} - \vec{x_{i,j}}$\\
+$\vec{v_3}=\vec{x_{i+1,j}} - \vec{x_{i,j}}$\\
+$\vec{v_4}=\vec{x_{i,j+1}} - \vec{x_{i,j}}$\\
+$\vec{e_1}=\frac{\vec{v_4} - \vec{v_1}}{|\vec{v_4} - \vec{v_1}|}$\\
+$\vec{e_2}=\frac{\vec{v_3} - \vec{v_2}}{|\vec{v_3} - \vec{v_2}|}$\\
+$a_1=\frac{1}{2}{|\vec{v_4} - \vec{v_1}|}$\\
+$a_2=\frac{1}{2}{|\vec{v_3} - \vec{v_2}|}$\\
+$\vec{e_1}\_=\frac{\vec{v_1}}{|\vec{v_1}|^2}$\\
+$\vec{e_2}\_=\frac{\vec{v_2}}{|\vec{v_2}|^2}$\\
+$\vec{e_3}\_=\frac{\vec{v_3}}{|\vec{v_3}|^2}$\\
+$\vec{e_4}\_=\frac{\vec{v_4}}{|\vec{v_4}|^2}$\\
+$\vec{n_1}=\vec{e_2}\times\vec{n}$\\
+$\vec{n_2}=\vec{-e_1}\times\vec{n}$\\
+$\vec{n_3}=\vec{e_1}\times\vec{n}$\\
+$\vec{n_4}=\vec{-e_2}\times\vec{n}$\\
+
+e.g. contribution to integral of flux density towards point(i+1,j):
+\begin{equation}
+-D*(C_{i+1,j} - C_{i,j})*\vec{e_3}\_*\vec{n_3}*a_1
+\end{equation}
+
+\begin{equation}
+-D*\vec{e_3}\_*\vec{n_3}*a_1 = F(i+1,j)
+\end{equation}
+
+Write flux coefficients to matrix:
+\[ \left( \begin{array}{ccccccccc}
+F_{i,j} & F_{i+1,j} & 0 & F_{i,j+1} & 0 & 0 & 0 & 0 & 0\\
+F_{i-1,j} & F_{i,j} & F_{i+1,j} & 0 & F_{i,j+1} & 0 & 0 & 0 & 0 \\
+0 & F_{i-1,j} & F_{i,j} & F_{i+1,j} & 0 & F_{i,j+1} & 0 & 0 & 0\\
+F_{i,j-1} & 0 & F_{i-1,j} & F_{i,j} & F_{i+1,j} & 0 & F_{i,j+1} & 0 & 0\\
+0 & F_{i,j-1} & 0 & F_{i-1,j} & F_{i,j} & F_{i+1,j} & 0 & F_{i,j+1} & 0\\
+0 & 0 & F_{i,j-1} & 0 & F_{i-1,j} & F_{i,j} & F_{i+1,j} & 0 & F_{i,j+1}\\
+0 & 0 & 0 & F_{i,j-1} & 0 & F_{i-1,j} & F_{i,j} & F_{i+1,j} & 0\\
+0 & 0 & 0 & 0 & F_{i,j-1} & 0 & F_{i-1,j} & F_{i,j} & F_{i+1,j}\\
+0 & 0 & 0 & 0 & 0 & F_{i,j-1} & 0 & F_{i-1,j} & F_{i,j}\end{array} \right)\]
+
+where 
+\begin{equation}
+F(i,j) = F_{i+1,j} + F_{i-1,j} + F_{i,j+1} + F_{i,j-1} + A/dt
+\end{equation}
+
+Since the surface elements are only approximation and are not area-wide, the flux cofficients of adjacent direction are averaged
+
+\subsubsection{Boundary Conditions}
+\begin{equation}
+\frac{\partial \Theta}{\partial t} = D\nabla\Theta + k(1-\Theta)
+\end{equation}
+
+stationary:\\
+
+\begin{equation}
+D\nabla\Theta + k(1-\Theta) = 0
+\end{equation}
+
+\begin{equation}
+\Theta' = 1 - \Theta:
+\end{equation}
+
+\begin{equation}
+-D\nabla\Theta' + k\Theta' = 0
+\end{equation}
+
+\begin{equation}
+D\nabla\Theta' - k\Theta' = 0
+\end{equation}
+
+in cylindric coordinates:\\
+
+\begin{equation}
+D\frac{1}{r}\frac{\partial}{\partial r}(r\frac{\partial \Theta'}{\partial r}) - k\Theta'  = 0
+\end{equation}
+
+\begin{equation}
+D\frac{1}{r}\left[\frac{\partial\Theta'}{\partial r} + r\frac{\partial^2\Theta'}{\partial r^2}\right] - k\Theta' = 0 \hspace{0.5cm} |\cdot r^2/D
+\end{equation}
+
+Bessel PDE:
+
+\begin{equation}
+r\frac{\partial\Theta'}{\partial r} + r^2\frac{\partial^2\Theta'}{\partial r^2} - \frac{k}{D}r^2\Theta' = 0
+\end{equation}
+
+\begin{equation}
+\frac{k}{D}r^2 = \rho^2 \hspace{0.5cm} \rho = \sqrt{\frac{k}{D}}r
+\end{equation}
+
+\begin{equation}
+\rho\frac{\partial\Theta'}{\partial \rho} + \rho^2\frac{\partial^2\Theta'}{\partial \rho^2} - \rho^2\Theta' = 0
+\end{equation}
+
+Solution of the PDE are the modified Bessel functions: \begin{math} I_0(\rho), K_0(\rho) \end{math}. With \begin{math} \rho \to \infty: I_0(\rho) \to \infty, K_0(\rho) \to 0 \Rightarrow only~ \Theta' = K_0(\rho) \end{math} is a solution.
+
+\begin{equation}
+\Theta = 1 - C\cdot K_0(\sqrt{\frac{k}{D}\cdot r}) \hspace{0.5cm} C = const
+\end{equation}
+
+\begin{equation}
+C = \frac{1-\Theta}{K_0(\sqrt{\frac{k}{D}}\cdot r)}
+\end{equation}
+
+derivative of the modified Bessel function:
+\begin{equation}
+\frac{\partial K_0(x)}{\partial X} = - K_1(x)
+\end{equation}
+
+\begin{equation}
+\frac{\partial \Theta}{\partial r} = \sqrt{\frac{k}{D}}\cdot C \cdot K_1(\sqrt{\frac{k}{D}}\cdot r)
+\end{equation}
+
+\begin{equation}
+\frac{\partial \Theta}{\partial r} = \sqrt{\frac{k}{D}} \frac{(1-\Theta)\cdot K_1(\sqrt{\frac{k}{D}}\cdot r)}{K_0(\sqrt{\frac{k}{D}}\cdot r)}
+\end{equation}
+
+relation between current from pde and current from finite differences:
+
+\begin{equation}
+\frac{\Theta_0 - \Theta_{-1}}{h_{-1}} = \sqrt{\frac{k}{D}} \frac{(1-\Theta(x))\cdot K_1(\sqrt{\frac{k}{D}}\cdot r)}{K_0(\sqrt{\frac{k}{D}}\cdot r)}
+\end{equation}
+
+\begin{equation}
+\Theta(x) = \frac{\Theta_0 + \Theta_{-1}}{2}
+\end{equation}
+
+\begin{equation}
+\Theta_0  = \Theta_0 \frac{\frac{K_2(\sqrt{\frac{k}{D}}\cdot r)}{h_{-1}} + \frac{\sqrt{\frac{k}{D}}\cdot K_1(\sqrt{\frac{k}{D}}\cdot r)}{2}}{\frac{K_2(\sqrt{\frac{k}{D}}\cdot r)}{h_{-1}} - \frac{\sqrt{\frac{k}{D}}\cdot K_1(\sqrt{\frac{k}{D}}\cdot r)}{2}} - \frac{\sqrt{\frac{k}{D}}\cdot K_1(\sqrt{\frac{k}{D}}\cdot r)}{\frac{K_2(\sqrt{\frac{k}{D}}\cdot r)}{h_{-1}} + \frac{\sqrt{\frac{k}{D}}\cdot K_1(\sqrt{\frac{k}{D}}\cdot r)}{2}}
+\end{equation}
+

@@ -1,0 +1,206 @@
+TopSim                                                  Tue Sep 17 09:35:45 2013
+
+Configuration parameters:
+
+[Include]
+INCLUDE_FILE = 'reference.cfg'
+
+[Setup]
+ANGLE_BISECTOR = False
+DEPOSITION = False
+DIMENSIONS = 2
+ETCHING = False
+INTERPOLATE = True
+ISOTROPIC = False
+REDEP_1 = False
+REDEP_2 = False
+SHADOWING = False
+SPUTTER_2 = False
+SURFACE_TYPE = 'rectilinear'
+
+[Initial Conditions]
+DELTA_X = 5.0
+DELTA_Y = 5.
+SURFACE_FILE = ''
+XMAX = 150.
+XMIN = -150.
+YMAX = 100.
+YMIN = -100.
+
+[Regions]
+DOMAINS = {'Si': 'everything'}
+NUMBER_OF_REGIONS = 1
+PRIMITIVES = { 'a': ('boxr',((0.0,0.0),(0.0,0.0),(0.0,0.0),2.0)),
+'b': ('boxr',((-5.0,5.0),(-5.0,5.0),(-5.0,5.0),0.0)),
+'c': ('boxr',((0.0,3.0),(-1.0,1.0),(-1.0,1.0),0.0)),
+'everything': ('all',())
+}
+REGIONS = float('-inf'), float('inf')
+
+[Beam]
+CENTER = (0.0, 0.0)
+CURRENT = 20.e-12
+DIMENSIONS = 1
+DIVERGENCE = (0.0, 0.0)
+ERF_BEAM_WIDTH = (200.0, 200.0)
+FWHM = (20.0, 20.0)
+TILT = 0.0
+TOTAL_TIME = 8.5
+TYPE = 'error function'
+
+[Scan]
+DWELL_TIME = 8.5
+OVERLAP = False
+OVERLAP_Y = False
+PASSES = 1
+PIXEL_FILE = ''
+PIXEL_SPACING = (0.0, 0.0)
+PIXELS = (1, 1)
+SCAN_WIDTH = (5.0, 1000.0)
+TYPE = raster
+Y_OVERSCAN = 1
+
+[Numerics]
+ADAPTIVE_GRID = True
+GRID_LAZINESS = 10.    # %
+GRID_REGIONS = ((-125.0,-70.0),(70.,125.))
+MAX_POINTS = 10000
+MAX_SEGLEN = 2.0,
+MIN_DELTA = 0.125,
+TIME_STEP = 0.0005
+
+[Physics]
+A_PC = 1.0
+BACKSCATTER_ANG_DIST_FILES = ('gasi30/bang.npz',)
+BACKSCATTER_YIELD_FILES = ('gasi30/byield.npz',)
+D_COEFF = 1.0
+DENSITIES = (49.939999999999998,)
+DIFFUSION = False
+F_PC = 1.0
+MATERIAL_NAMES = 'Si',
+N = 1.0 #cos^n alpha (sputtered atoms)
+N_DEP = 0.5
+N_ETCH = 0.5
+N_PC = 17.0
+S = 1.0 #redeposition sticking coefficient
+S_PC = 1.0
+S_YIELD = 0.0
+SPUTTER_ANG_DIST_FILES = ('gasi30/sang.npz',)
+SPUTTER_YIELD_FILES = ('gasi30/syield.npz',)
+TABLE_DIRECTORIES = ('gasi30',)
+
+[Output]
+DISPLAY_SURFACE = False
+LOG_FILE = True
+SAVE_ALL = False
+SAVE_ANGLES = False
+SAVE_BEAM_FLUXES = False
+SAVE_BINARY = False
+SAVE_FLUXES = False
+SAVE_MATERIAL_NAMES = False
+SAVE_POSITIONS = True
+SAVE_PRECURSOR = False
+SURFACE_FILE = noredep.srf
+VERBOSE = False
+WRITE_TIME_STEP = 0.5
+
+Simulation Output:
+
+refine at indices [ 6  7  8  9 10 11 12 13 14 15 16 17 45 46 47 48 49 50 51 52 53 54 55 56]
+refine at indices [ 6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80]
+time zmin zmax = 0.0 0.0 0.0
+time zmin zmax = 0.0 0.0 0.0
+time zmin zmax = 0.5 -12.6432247478 2.77555756156e-17
+refine at indices [ 20 110]
+refine at indices [ 19 113]
+refine at indices [ 23 111]
+refine at indices [ 18 118]
+time zmin zmax = 1.0 -25.2864494956 1.45716771982e-16
+refine at indices [ 17 121]
+refine at indices [ 16 124]
+refine at indices [ 15 127]
+refine at indices [ 19 125]
+refine at indices [ 21 125]
+time zmin zmax = 1.5 -37.9296742434 1.52655665886e-16
+refine at indices [ 18 130]
+refine at indices [ 17 133]
+refine at indices [ 25 127]
+refine at indices [ 14 140]
+refine at indices [ 17 139]
+refine at indices [ 36 122]
+refine at indices [ 16 144]
+refine at indices [ 13 149]
+refine at indices [ 16 148]
+time zmin zmax = 2.0 -50.5728989912 1.38777878078e-16
+refine at indices [ 15 151]
+refine at indices [ 33 135]
+refine at indices [ 14 156]
+refine at indices [ 12 160]
+refine at indices [ 28 146]
+refine at indices [ 27 149]
+refine at indices [ 31 147]
+time zmin zmax = 2.5 -63.2161237391 2.63677968348e-16
+refine at indices [ 26 154]
+refine at indices [ 34 148]
+refine at indices [ 25 159]
+refine at indices [ 14 172]
+refine at indices [ 25 163]
+refine at indices [ 39 151]
+refine at indices [ 24 168]
+refine at indices [ 23 171]
+time zmin zmax = 3.0 -75.8593484869 2.22044604925e-16
+refine at indices [ 22 174]
+refine at indices [ 13 185]
+refine at indices [ 45 155]
+refine at indices [ 22 180]
+refine at indices [ 11 193]
+refine at indices [ 22 184]
+refine at indices [ 13 195]
+refine at indices [ 22 188]
+time zmin zmax = 3.5 -88.5025732347 2.49800180541e-16
+refine at indices [ 21 191]
+refine at indices [ 53 161]
+refine at indices [ 20 196]
+refine at indices [ 12 206]
+time zmin zmax = 4.0 -101.145797982 2.77555756156e-16
+refine at indices [ 20 200]
+refine at indices [ 10 212]
+refine at indices [ 20 204]
+refine at indices [ 12 214]
+refine at indices [ 61 167]
+time zmin zmax = 4.5 -113.78902273 5.55111512313e-16
+refine at indices [ 20 210]
+refine at indices [ 19 213]
+time zmin zmax = 5.0 -126.432247478 8.60422844084e-16
+refine at indices [ 65 169]
+refine at indices [ 18 218]
+refine at indices [ 11 227]
+time zmin zmax = 5.5 -139.075472226 9.15933995316e-16
+refine at indices [ 18 222]
+refine at indices [  9 233]
+refine at indices [ 11 233]
+refine at indices [ 73 173]
+time zmin zmax = 6.0 -151.718696974 4.71844785466e-16
+refine at indices [ 72 176]
+refine at indices [ 19 231]
+refine at indices [ 18 234]
+time zmin zmax = 6.5 -164.361921722 5.55111512313e-16
+refine at indices [ 76 178]
+refine at indices [ 17 239]
+time zmin zmax = 7.0 -177.005146469 5.55111512313e-16
+refine at indices [ 10 248]
+refine at indices [ 80 180]
+refine at indices [ 17 245]
+time zmin zmax = 7.5 -189.648371217 6.66133814775e-16
+refine at indices [ 83 181]
+time zmin zmax = 8.0 -202.291595965 1.33226762955e-15
+refine at indices [  8 258]
+refine at indices [ 17 251]
+refine at indices [ 10 260]
+refine at indices [ 86 186]
+delete at indices [ 87 186]
+refine at indices [ 87 185]
+time zmin zmax = 8.5 -214.934820713 2.6645352591e-15
+time zmin zmax = 8.5 -214.934820713 2.6645352591e-15
+
+CPU time: 35.68

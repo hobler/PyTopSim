@@ -1,0 +1,124 @@
+\begin{keydescription}{\texttt{DWELL\_TIME}}
+This parameter specifies the dwell time per pixel in seconds. If
+\texttt{TYPE='pixel file'} the dwell time is multiplied by the value found in
+the \texttt{PIXEL\_FILE}. The total simulation time in case of a raster or
+serpentine scan is given by $\mathtt{PASSES} \times \mathtt{PIXELS[0]} \times
+\mathtt{PIXELS[1]} \times \mathtt{DWELL\_TIME}$. If \texttt{DWELL\_TIME} is not
+specified, it is calculated from \texttt{[Beam]TOTAL\_TIME}. If both
+\texttt{DWELL\_TIME} and \texttt{[Beam]TOTAL\_TIME} are specified,
+\texttt{[Beam]TOTAL\_TIME} will be overwritten by the value calculated from
+\texttt{DWELL\_TIME}.
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> required if \texttt{[Beam]TOTAL\_TIME} is not specified
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{OVERLAP}}
+This parameter specfies whether all the beams of a pass should be overlapped to
+a single beam. The advantage of an overlapped beam is that the time step is not
+limited to the pixel dwell time. This approximation is only valid if the change
+in the surface caused by a single pixel during \texttt{DWELL\_TIME} is small
+enough.
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False} 
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{OVERLAP\_Y}}
+This parameter specfies whether all the beams along the line of a scan in
+y-direction should be overlapped to a single beam. The advantage of an
+overlapped beam is that the time step is not limited by the pixel dwell time.
+This approximation is only valid if the change  in the surface caused by a
+single pixel is small enough. 
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False} 
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{Y\_OVERSCAN}}
+This parameter instructs the simulation to scan each Y line in a 3D 
+simulation a preset number of times. This is used to produce a marching
+line scane in 3D mode without using overlap modes. A value of 1 indicates
+that the line is to be scanned once and then the beam will step in the x 
+direction. A larger value causes the beam to scan that Y line a larger
+number of times before stepping in the x direction. 
+\begin{keytab}
+   Type:    \> integer \\
+   Default: \> 1 
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{PASSES}}
+This parameter specifies the number of passes, i.e. the number of times the
+pattern defined by \texttt{TYPE} is repeated.
+\begin{keytab}
+   Type:    \> integer \\
+   Default: \> 1
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{PIXEL\_FILE}}
+This parameter specifies the name of the pixel file, containing a list of
+pixels coordinates and dwell times. The dwell times will be multiplied with
+\texttt{DWELL\_TIME}.
+\begin{keytab}
+   Type:    \> character string \\
+   Default: \> required if \texttt{TYPE='pixel file'}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{PIXEL\_SPACING}}
+This parameter specifies the pixel spacing in x- and y-direction for
+\texttt{TYPE='raster'} and \texttt{TYPE='serpentine'}. If only one value of
+\texttt{PIXEL\_SPACING} is given, the second value is assumed to be identical to
+the first value. Ignored if \texttt{TYPE='none'} or \texttt{TYPE='pixel file'}.
+The units of \texttt{PIXEL\_SPACING} are nm.
+\begin{keytab}
+   Type:    \> (real,) \\
+   Default: \> \texttt{0.,0.} if \texttt{TYPE='none'} \\
+            \> \texttt{SCAN\_WIDTH/max(PIXEL-1,1)} otherwise
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{PIXELS}}
+This parameter specifies the number of pixels in x- and y-direction for
+\texttt{TYPE='raster'} and \texttt{TYPE='serpentine'}. If only one value
+of \texttt{PIXELS} is given, the second value is assumed to be 1. Ignored if
+\texttt{TYPE='pixel file'}.
+\begin{keytab}
+   Type:    \> (integer,) \\
+   Default: \> \texttt{1,1} 
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{SCAN\_WIDTH}}
+This parameter specifies the scan width in x and y direction for
+\texttt{TYPE='raster'} and \texttt{TYPE='serpentine'}. If only one value of
+\texttt{SCAN\_WIDTH} is given, the second value is assumed to be identical to
+the first value. Ignored if \texttt{TYPE='pixel file'}. The units of
+\texttt{SCAN\_WIDTH} are nm.
+\begin{keytab}
+   Type:    \> (real,) \\
+   Default: \> \texttt{PIXEL\_SPACING*max(PIXELS-1,1)} if
+               \texttt{PIXEL\_SPACING} is specified \\ 
+            \> \texttt{1.,1.} otherwise
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{TYPE}}
+This parameter specifies the scan type. \texttt{TYPE='raster'} means a scan
+along parallel lines starting each line on the the same side.
+\texttt{TYPE='serpentine'} means a scan along parallel lines starting every
+other line on the the same side. \texttt{TYPE='pixel file'} means the pixel positions
+are specified in the \texttt{PIXEL\_FILE}. For \texttt{TYPE='none'} no scan is
+performed, being equivalent to \texttt{TYPE='raster'} and \texttt{PIXELS=1,1}.
+\begin{keytab}
+   Type:    \> character string \\
+   Default: \> \texttt{'raster'} \\
+   Range:   \> \texttt{'none'}, \texttt{'raster'}, \texttt{'serpentine'},
+               \texttt{'pixel file'}
+\end{keytab}
+\end{keydescription}

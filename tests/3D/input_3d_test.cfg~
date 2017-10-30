@@ -1,0 +1,82 @@
+[Ion]
+ION = 'Ga'
+ENERGY = '30keV'
+
+[Setup]
+DIMENSION = 3
+WORKDIR = '/home/hobler/rhdd/eclipse/IonShaper/trunk/work/'
+SPUTTER_YIELD_FILES =  '/home/hobler/rhdd/eclipse/IonShaper/trunk/work/GaSi30keV.txt',   
+READ_SURFACE_FROM_FILE = False
+SURFACE_FILE = '/home/hobler/rhdd/eclipse/IonShaper/trunk/work/surface_3d_variable.dat'
+CNT_FILE = '/home/hobler/rhdd/eclipse/IonShaper/trunk/work/surface3d.cnt'
+SURFACE_TYPE = 'rectilinear'
+
+[Grid]
+XMIN = -100.
+XMAX = 100.
+DELTA_X = 5.0
+
+YMIN = -100.
+YMAX = 100.
+DELTA_Y = 5.0
+
+MAXPOINTS = 10000
+SEGLEN = 10.0
+EPS = 10.0
+REFINE_GRID = False
+REFINE_GRID_RANGE = ((-60,60,-60,60),)
+
+[Region]
+NUMBER_OF_REGIONS = 1
+MATERIAL_NAMES = 'Si',
+MATERIAL_DENSITIES = (50.2,) 
+REGIONS = float('-inf'), float('inf')
+
+[Time]
+TIME_STEP = 0.1
+TIME_INTERIM = 1.0
+
+[Beam]
+BEAM_TYPE = 2
+BEAM_CURRENT = 1e-15
+BEAM_ANGLE = (0.0,)
+BEAM_CENTER = (-20.0, -20.0)
+FWHM = 20.0
+
+SCAN_TYPE = 1
+NPASS = 1
+PIXELS = (4, 4)
+PIXEL_SPACING = (10.0, 10.0)
+DWELL_TIME = 10.0
+OVERLAPPED = True
+
+[Physics]
+A_PC = 1.0e-12    #are of precursor molecule
+F_PC = 2.4e16    #flux of precursor molecules onto surface
+N_PC = 17.0   #processed precursor per sputtered atom
+N_ETCH = 0.5  #etched atoms per precursor
+S_PC = 1.0    #precursor sticking coefficient 
+D_COEFF = 5.0e-8 #precursor diffusion coefficient
+N_DEP = 0.5
+S = 1.0 #redeposition sticking coefficient 
+N = 1.0 #cos^n alpha (sputtered atoms)
+DIFFUSION = False
+#DIFFUSION = True
+
+[Mode]
+ANGLE_BISECTOR = False
+INTERPOLATE = True
+ISOTROPIC = False
+REDEP_1 = False
+REDEP_2 = False
+SPUTTER_2 = False
+ETCHING = True
+DEPOSITION = False
+
+[Output]
+PLOT = 1
+MOVIE = False
+M_FILE = '/home/thomas/projects/IonShaper/trunk/work/surface'
+FIG = False
+F_FILE = '/home/thomas/projects/IonShaper/trunk/work/surface3d.png'
+

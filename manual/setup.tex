@@ -1,0 +1,112 @@
+\begin{keydescription}{\texttt{ANGLE\_BISECTOR}}
+This parameter specifies whether the angle bisector is used to determine the 
+direction of point advancement. If \texttt{ANGLE\_BISECTOR=False}, point
+advancement is perpendicular to the line connecting the two neighboring points.
+Only valid if \texttt{SURFACE\_TYPE='rectilinear'}.
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{DEPOSITION}}
+This parameter enables beam induced deposition.
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{DIMENSIONS}}
+This parameter specifies the number of spatial dimension of the coordinate
+system.
+\begin{keytab}
+   Type:    \> integer \\
+   Default: \> required \\
+   Range:   \> \texttt{1}, \texttt{2}, \texttt{3}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{ETCHING}}
+This parameter enables beam induced etching.
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{INTERPOLATE}}
+This parameter specifies whether the grid points are interpolated back to the 
+x- and y-positions of the initial grid. Only valid if
+\texttt{SURFACE\_TYPE='rectilinear'}.
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{True}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{ISOTROPIC}}
+This parameter specifies whether isotropic sputtering is used or the sputter 
+yield is read from a table (see the \texttt{[Physics]} section). If
+\texttt{ISOTROPIC=True}, the first order sputter fluxes are set equal to the
+beam flux. Otherwise, the first order sputter fluxes are calculated as the
+product of the beam fluxes, the cosine of the incidence angle, and the sputter
+yield.
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{REDEP\_1}}
+This parameter specifies whether first order redeposition is considered, i.e.
+redeposition of atoms ejected by the beam (first order sputtering).
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{REDEP\_2}}
+This parameter specifies whether second order redeposition is considered, i.e.
+redeposition of atoms ejected in second order sputtering.
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{SPUTTER\_2}}
+This parameter specifies whether second order sputtering is considered, i.e.
+sputtering caused by backscattered ions.
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{SHADOWING}}
+This parameter specifies whether complex shadowing, in addition to simple 
+visibility, is applied to the simulation of the surface. It is currently only
+availabe in 2D.
+\newline
+Simple visibility finds points that are shadowed by the limits of ejection, i.e.
+the ejection angles cannot be larger than 90 degrees.
+\newline
+Complex shadowing finds points that are shadowed by other points being in the way
+by finding local maxima in the cosine (Source to Destination). Such a Point of
+Interest is the starting point of a shadow, and the next point with a higher cosine
+is the corresponding endpoint.
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{SURFACE\_TYPE}}
+This parameter specifies the type of the grid for the surface. 
+\begin{keytab}
+   Type:    \> character string \\
+   Default: \> \texttt{'rectilinear'}
+\end{keytab}
+\end{keydescription}

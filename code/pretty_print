@@ -1,0 +1,7 @@
+#!/bin/bash
+fname=${1%py}
+#enscript -2 -q -C --pretty-print --color -f Courier8 -r -p ${fname}ps $1
+enscript -1 -q -C --pretty-print --color -f Monospace8 -R -p ${fname}ps $1
+ps2pdf ${fname}ps ${fname}pdf
+#xerox-color ${fname}pdf
+

@@ -1,0 +1,204 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.5.19)  14 SEP 2012 15:58
+entering extended mode
+ %&-line parsing enabled.
+**manual.tex
+(./manual.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/latex209.def
+File: latex209.def 1998/05/13 v0.52 Standard LaTeX file
+
+
+          Entering LaTeX 2.09 COMPATIBILITY MODE
+ *************************************************************
+    !!WARNING!!    !!WARNING!!    !!WARNING!!    !!WARNING!!   
+ 
+ This mode attempts to provide an emulation of the LaTeX 2.09
+ author environment so that OLD documents can be successfully
+ processed. It should NOT be used for NEW documents!
+ 
+ New documents should use Standard LaTeX conventions and start
+ with the \documentclass command.
+ 
+ Compatibility mode is UNLIKELY TO WORK with LaTeX 2.09 style
+ files that change any internal macros, especially not with
+ those that change the FONT SELECTION or OUTPUT ROUTINES.
+ 
+ Therefore such style files MUST BE UPDATED to use
+          Current Standard LaTeX: LaTeX2e.
+ If you suspect that you may be using such a style file, which
+ is probably very, very old by now, then you should attempt to
+ get it updated by sending a copy of this error message to the
+ author of that file.
+ *************************************************************
+
+\footheight=\dimen102
+\@maxsep=\dimen103
+\@dblmaxsep=\dimen104
+\@cla=\count79
+\@clb=\count80
+\mscount=\count81
+(/usr/share/texmf-texlive/tex/latex/base/tracefnt.sty
+Package: tracefnt 1997/05/29 v3.0j Standard LaTeX package (font tracing)
+\tracingfonts=\count82
+LaTeX Info: Redefining \selectfont on input line 101.
+)
+\symbold=\mathgroup4
+\symsans=\mathgroup5
+\symtypewriter=\mathgroup6
+\symitalic=\mathgroup7
+\symsmallcaps=\mathgroup8
+\symslanted=\mathgroup9
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 293.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 294.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 295.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 301.
+LaTeX Info: Redefining \em on input line 311.
+
+(/usr/share/texmf-texlive/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 375.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 377.
+LaTeX Font Info:    Redeclaring math delimiter \bracevert on input line 379.
+)
+Compatibility mode: loading imsil.sty rather than imsil.cls.
+ (./imsil.sty
+Document Style `IMSIL_Manual'. 18 Sep 89
+(./promis12.sty)
+\descriptionmargin=\dimen105
+\c@part=\count83
+\c@chapter=\count84
+\c@section=\count85
+\c@subsection=\count86
+\c@subsubsection=\count87
+\c@paragraph=\count88
+\c@subparagraph=\count89
+\c@figure=\count90
+\c@table=\count91
+) (./times.sty
+Package: times 1999/03/29 PSNFSS v.7.2 Times font as default roman : S Rahtz
+) (./manualfo.tex) (./manual.aux)
+\openout1 = `manual.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 26.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+) (./titlepag.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
+) [0
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 44.
+ (./manual.toc
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 4.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 4.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 4.
+
+(/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+))
+\tf@toc=\write3
+\openout3 = `manual.toc'.
+
+ [1
+
+]
+Chapter 1.
+[2
+
+]
+Chapter 2.
+(./files.tex) [3
+
+]
+Chapter 3.
+(./parameters.tex) [4
+
+]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 63.
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 63.
+ (./include.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 1.
+) [5] (./setup.tex [6] [7]) [8]
+(./initial.tex [9]) [10] (./regions.tex) [11] [12] (./beam.tex [13] [14])
+[15] (./scan.tex [16] [17]
+Underfull \hbox (badness 1005) in paragraph at lines 97--103
+\OT1/ptm/m/n/12 This pa-ram-e-ter spec-i-fies the scan width in x and y di-rec-
+tion for \OT1/pcr/m/n/12 TYPE='raster' \OT1/ptm/m/n/12 and
+ []
+
+) [18] (./physics.tex [19]) [20] (./numerics.tex
+Underfull \hbox (badness 3189) in paragraph at lines 20--23
+\OT1/ptm/m/n/12 This pa-ram-e-ter spec-i-fies the x and y range of the grid to 
+be re-fined. Ig-nored if
+ []
+
+[21]) [22] (./output.tex [23] [24]) [25]
+Chapter 4.
+(./examples.tex) [26
+
+]
+Chapter 5.
+[27
+
+] (./manual.aux) ) 
+Here is how much of TeX's memory you used:
+ 508 strings out of 495061
+ 5773 string characters out of 1182621
+ 52676 words of memory out of 3000000
+ 3668 multiletter control sequences out of 15000+50000
+ 24954 words of font info for 68 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 25i,7n,23p,887b,208s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/s
+hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-
+texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/pub
+lic/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
+/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/sha
+re/texmf-texlive/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texmf-texlive/f
+onts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/cou
+rier/ucrro8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></u
+sr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texli
+ve/fonts/type1/urw/times/utmr8a.pfb>
+Output written on manual.pdf (28 pages, 188250 bytes).
+PDF statistics:
+ 145 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

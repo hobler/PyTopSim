@@ -1,0 +1,109 @@
+\begin{keydescription}{\texttt{XMIN}}
+This parameter specifies the minimum x value of the surface grid in nm.
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> required \\
+   Range:   \> $\ge 0$
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{XMAX}}
+This parameter specifies the maximum x value of the surface grid in nm.
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> required \\
+   Range:   \> $\ge 0$
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{YMIN}}
+This parameter specifies the minimum y value of the surface grid in nm.
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> required \\
+   Range:   \> $\ge 0$
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{YMAX}}
+This parameter specifies the maximum y value of the surface grid in nm.
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> required \\
+   Range:   \> $\ge 0$
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{DELTA\_X}}
+This parameter specifies the grid spacing in x direction in nm.
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> required \\
+   Range:   \> $\ge 0$
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{DELTA\_Y}}
+This parameter specifies the grid spacing in y direction in nm.
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> required \\
+   Range:   \> $\ge 0$
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{MAXPOINTS}}
+This parameter specifies the maximum number of total points in the simulation if REFINE\_GRID = True. (will later be used for removing points from the grid) 
+\begin{keytab}
+   Type:    \> integer \\
+   Default: \> 10000 \\
+   Range:   \> > 0
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{SEGLEN}}
+This parameter specifies the maximum segment length in nm for grid refinement if REFINE\_GRID = True. If the length is EPS percent above this value a new point is inserted 
+at half of the segment length.
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> 10.0 \\
+   Range:   \> > 0
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{EPS}}
+This parameter specifies the tolerated percentage deviation from the specified segment length SEGLEN if REFINE\_GRID = True. 
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> 10.0 \\
+   Range:   \> $\ge 0$
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{MINSPACE}}
+This parameter specifies the minimum grid spacing in nm. The minimum grid spacing prevents the formation of kinks in the contour due to excessive grid refinement if REFINE\_GRID = True.
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> 1.0 \\
+   Range:   \> > 0
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{REFINE\_GRID}}
+This parameter specifies whether the grid is dynamically refined. 
+\begin{keytab}
+   Type:    \> logical \\
+   Default: \> F \\
+   Range:   \> T,F
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{REFINE\_GRID\_RANGE}}
+This parameter specifies the x and y range of the grid to be refined if REFINE\_GRID = True.
+\begin{keytab}
+   Type:    \> tuple \\
+   Default: \> (XMIN, XMAX, YMIN, YMAX) \\
+   Range:   \> \\
+\end{keytab}
+\end{keydescription}
+

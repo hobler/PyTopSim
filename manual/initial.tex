@@ -1,0 +1,78 @@
+\begin{keydescription}{\texttt{DELTA\_X}}
+This parameter specifies the initial grid spacing in x direction. The units of
+\texttt{DELTA\_X} are nm. This parameter is ignored if the initial surface
+is read from a file (see \texttt{SURFACE\_FILE}), or if the simulation is 1D
+(see \texttt{DIMENSIONS} in the \texttt{[Setup]} section).
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> \texttt{5.}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{DELTA\_Y}}
+This parameter specifies the initial grid spacing in y direction. The units of
+\texttt{DELTA\_Y} are nm. This parameter is ignored if the initial surface
+is read from a file (see \texttt{SURFACE\_FILE}), or if the simulation is 1D or
+2D (see \texttt{DIMENSIONS} in the \texttt{[Setup]} section).
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> \texttt{5.}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{SURFACE\_FILE}}
+This parameter specifies the name of the surface file to be read at at the
+beginning of the simulation. The format of the file must be consistent with the
+\texttt{DIMENSIONS} and \texttt{SURFACE\_TYPE} parameters of the
+\texttt{[Setup]} section. If \texttt{SURFACE\_FILE=''}, a flat surface at
+z=0 is assumed.
+\begin{keytab}
+   Type:    \> character string \\
+   Default: \> ''
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{XMAX}}
+This parameter specifies the maximum x value of the initial surface grid. The
+units of \texttt{XMAX} are nm. This parameter is ignored if the initial surface
+is read from a file (see \texttt{SURFACE\_FILE}), or if the simulation is 1D
+(see \texttt{DIMENSIONS} in the \texttt{[Setup]} section).
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> \texttt{100.}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{XMIN}}
+This parameter specifies the minimum x value of the initial surface grid. The
+units of \texttt{XMIN} are nm. This parameter is ignored if the initial surface
+is read from a file (see \texttt{SURFACE\_FILE}), or if the simulation is 1D
+(see \texttt{DIMENSIONS} in the \texttt{[Setup]} section).
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> \texttt{-100.}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{YMAX}}
+This parameter specifies the maximum y value of the initial surface grid. The
+units of \texttt{YMAX} are nm. This parameter is ignored if the initial surface
+is read from a file (see \texttt{SURFACE\_FILE}), or if the simulation is 1D or
+2D (see \texttt{DIMENSIONS} in the \texttt{[Setup]} section).
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> \texttt{100.}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{YMIN}}
+This parameter specifies the minimum y value of the initial surface grid. The
+units of \texttt{YMIN} are nm. This parameter is ignored if the initial surface
+is read from a file (see \texttt{SURFACE\_FILE}), or if the simulation is 1D or
+2D (see \texttt{DIMENSIONS} in the \texttt{[Setup]} section).
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> \texttt{-100.}
+\end{keytab}
+\end{keydescription}
+

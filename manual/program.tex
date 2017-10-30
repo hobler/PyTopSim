@@ -1,0 +1,49 @@
+\section{Program Structure}
+\section{Simulation Setup}
+\subsection{Operation mode}
+\subsection{Beam}
+\subsubsection{2D}
+\begin{equation}
+F = \frac{I}{e} gauss\_distr
+\end{equation}
+
+\begin{equation}
+\overline{F} = \frac{1}{n_yt_d} \int{F} dt = \frac{1}{n_yt_d}\frac{t_d}{p_y} \int_{-\infty}^{\infty}{F(x,y)} dy
+\end{equation}
+
+\begin{equation}
+\overline{F} = \frac{I}{e}\frac{1}{n_y p_y} gauss\_distr_{2D}(x)
+\end{equation}
+
+
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+	     & (1) & (2) & (3)\\
+\hline
+analog\_scan & f & f & t \\
+\hline
+beam\_current & I & I & I \\
+\hline
+n\_pixels & n$_y$ & 1 & (1) \\
+\hline
+pixel\_spacing & p$_y$ & L & (L) \\
+\hline
+n\_passes & & & \\
+\hline
+scan\_range & & & L\\
+\hline
+dwell\_time & t$_d$ &  n$_y$t$_d$ & $\frac{1}{f_y}$ \\
+\hline
+scan\_frequency & & & f$_y$\\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Target}
+\subsection{Grid}
+\subsubsection{Dynamic Refinement}
+Provide desired segment length, error tolerance $\epsilon$ and maxmium number of points.
+
+

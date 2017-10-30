@@ -1,0 +1,120 @@
+\begin{keydescription}{\texttt{DISPLAY\_SURFACE}}
+This parameter specifies whether the plots should be displayed at the end of the
+simulation. A window opens, and various options are available through keystrokes
+while the window is in focus. A short help is printed to
+stdout. The same functionality is available through the plot.py script after
+the simulation has finished.
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{LOG\_FILE}}
+This parameter specifies whether a copy of the input parameters and the data
+written to the screen should also be written to a log file. The name of the log
+file is identical to that of the configuration file, but with the extension
+\texttt{'.log'}.
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{SAVE\_ALL}}
+This parameter specifies whether all available fields should be
+written to the \texttt{SURFACE\_FILE}. Equivalent to all \texttt{SAVE\_xxx=True}.
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{SAVE\_ANGLES}}
+This parameter specifies whether the local angle between the surface
+normal and the beam should be written to the \texttt{SURFACE\_FILE}. Ignored if 
+\texttt{SAVE\_ALL=True}.
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{SAVE\_BEAM\_FLUXES}}
+This parameter specifies whether the local beam fluxes should be written
+to the \texttt{SURFACE\_FILE}. Ignored if \texttt{SAVE\_ALL=True}.
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{SAVE\_FLUXES}}
+This parameter specifies whether the local surface fluxes should be written to
+the \texttt{SURFACE\_FILE}. Ignored if \texttt{SAVE\_ALL=True}.
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{SAVE\_POSITIONS}}
+This parameter specifies whether the positions of the surface vertices
+should be written to the \texttt{SURFACE\_FILE}. Ignored if
+\texttt{SAVE\_ALL=True}.
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{True}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{SAVE\_PRECURSOR}}
+This parameter specifies whether the local values of the precursor coverage
+should be written to the \texttt{SURFACE\_FILE}. Ignored if
+\texttt{SAVE\_ALL=True}. 
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{SURFACE\_FILE}}
+This parameter specifies the name of the surface file, which is the main output
+file.
+\begin{keytab}
+   Type:    \> character string \\
+   Default: \> \texttt{'}input\_file\texttt{.srf'}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{VERBOSE}}
+This parameter specifies whether more information should be printed and
+written to the log file.
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{WRITE\_TIME\_STEP}}
+This parameter specifies the time between two interim outputs to the
+\texttt{SURFACE\_FILE}. 
+\textbf{WARNING:} The ratio of the total simulation
+time (\texttt{[Beam]TOTAL\_TIME} or as calculated from \texttt{[Scan]DWELL\_TIME})
+and \texttt{WRITE\_TIME\_STEP} determines the number of frames written to the
+\texttt{SURFACE\_FILE}. Careless choice of \texttt{WRITE\_TIME\_STEP} may result
+in excessive hard disk space requirements.
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> \texttt{1.}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{SAVE\_BINARY}}
+This paramter specifies wether the output surface should be saved as hexadecimal numbers
+in order to provide better accuracy when loading a surface for another simulation.
+\begin{keytab}
+   Type:    \> boolean \\
+   Default: \> \texttt{False}
+\end{keytab}
+\end{keydescription}

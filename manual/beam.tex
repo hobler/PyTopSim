@@ -1,0 +1,112 @@
+\begin{keydescription}{\texttt{CENTER}}
+This parameter specifies the x and y coordinates of the beam center.
+\texttt{CENTER} may also be considered the origin of the scan coordinate
+system, i.e. the position of the first pixel in case of a predefined scan
+or an offset applied to the coordinates in the pixel file. If only one value
+of \texttt{CENTER} is given, the second value is assumed to be identical to
+the first value. The units  of \texttt{CENTER} are nm.  
+\begin{keytab}
+   Type:    \> (real,) \\
+   Default: \> \texttt{(0.,0.)}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{CURRENT}}
+This parameter specifies the beam current in A. For \texttt{DIMENSIONS=0} the
+current density is $\mathtt{CURRENT} / (\mathtt{SCAN\_WIDTH[0]} \cdot
+\mathtt{SCAN\_WIDTH[1]})$ (units A/nm$^2$). For \texttt{DIMENSIONS=1} the  line
+current density is $\mathtt{CURRENT} / \mathtt{SCAN\_WIDTH[1]}$ (units A/nm). 
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> required
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{DIMENSIONS}}
+This parameter specifies the dimensions of the beam current density function,
+i.e. in how many directions the beam current density varies. For
+\texttt{DIMENSIONS=2} the current density varies in both x- and y-direction. For 
+\texttt{DIMENSIONS=1} the current density varies in x-direction only. For 
+\texttt{DIMENSIONS=0} the current density does not vary in any direction. 
+\begin{keytab}
+   Type:    \> integer \\
+   Default: \> \texttt{0} for \texttt{TYPE='constant'} \\
+            \> \texttt{1} otherwise \\
+   Range:   \> \texttt{0} for \texttt{TYPE='constant'} \\
+            \> \texttt{1}, \texttt{2} otherwise
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{DIVERGENCE}}
+This parameter specifies the beam divergence as the standard deviation of a
+Gaussian distribution function. If only one value of \texttt{DIVERGENCE} is
+given, the second value is assumed to be identical to the first value. The
+units of \texttt{DIVERGENCE} are degrees.
+\begin{keytab}
+   Type:    \> (real,) \\
+   Default: \> \texttt{(0.,0.)} 
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{ERF\_BEAM\_WIDTH}}
+This parameter specifies the displacement $x_2-x_1$ of the two error functions
+defining the error function beam (see \texttt{TYPE}). Note that for
+$\mathtt{ERF\_BEAM\_WIDTH} \ll \mathtt{FWHM}$ the error function beam tends
+towards a Gaussian beam with FWHM equal to \texttt{FWHM}. For increasing
+\texttt{ERF\_BEAM\_WIDTH} the top of the distribution gets flatter and the
+FWHM increases. For $\mathtt{ERF\_BEAM\_WIDTH} \gg \mathtt{FWHM}$ the error
+function beam is a constant beam with blurred edges, where the amount of blur
+depends on \texttt{FWHM}. If only one value of \texttt{ERF\_BEAM\_WIDTH} is
+given, the second value is assumed to be identical to the first value. The units
+of \texttt{ERF\_BEAM\_WIDTH} are nm. Ignored unless \texttt{TYPE='error function'}.
+\begin{keytab}
+   Type:    \> (real,) \\
+   Default: \> \texttt{(1.e-10,1.e-10)} 
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{FWHM}}
+This parameter specifies the full width at half maximum (FWHM) of the beam
+distribution function, except for \texttt{TYPE='error function'} where
+\texttt{FWHM} specifies the FWHM of the corresponding Gaussian beam. If only one
+value of \texttt{FWHM} is given, the second value is assumed to be identical to
+the first value. The units of \texttt{FWHM} are nm.
+\begin{keytab}
+   Type:    \> (real,) \\
+   Default: \> \texttt{(30.,30.)} 
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{TILT}}
+This parameter specifies the beam incidence angle with respect to the z-axis.
+Positive values mean the ions have a velocity component in positive x-direction.
+The units of \texttt{TILT} are degrees.
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> \texttt{0.}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{TOTAL\_TIME}}
+This parameter specifies the total time the beam is on, i.e. the total
+simulation time. The units of \texttt{TOTAL\_TIME} are seconds.  
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> required if \texttt{[Scan]DWELL\_TIME} is not specified 
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{TYPE}}
+This paramter specifies the type of the beam current density function. Note that
+the type of the beam is fully specified only with its \texttt{DIMENSION} unless
+\texttt{TYPE='constant'}. An error function beam corresponds to overlapped
+Gaussian beams if the pixel spacing is small enough and is given by $f(x) \sim
+\mathrm{erf}((x-x_2)/(\sqrt{2}\sigma)) -
+\mathrm{erf}((x-x_1)/(\sqrt{2}\sigma))$.
+\begin{keytab}
+   Type:    \> integer \\
+   Default: \> \texttt{'Gaussian'} \\
+   Range:   \> \texttt{'constant'}, \texttt{'Gaussian'}, 
+               \texttt{'error function'}
+\end{keytab}
+\end{keydescription}

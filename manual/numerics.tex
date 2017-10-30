@@ -1,0 +1,73 @@
+\begin{keydescription}{\texttt{ADAPTIVE\_GRID}}
+This parameter specifies whether the grid is dynamically adapted. 
+\begin{keytab}
+   Type:    \> logical \\
+   Default: \> \texttt{False}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{GRID\_LAZINESS}}
+This parameter specifies the tolerated percentage deviation from the
+maximum segment length \texttt{MAX\_SEGLEN} for point/line insertion. The
+parameter is intended to avoid repeated insertions and deletions at the same position.
+Ignored if \texttt{ADAPTIVE\_GRID=False}.
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> \texttt{10.}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{GRID\_REGIONS}}
+This parameter specifies the x and y range of the grid to be refined. Ignored 
+if \texttt{ADAPTIVE\_GRID=False}.
+\begin{keytab}
+   Type:    \> tuple of tuples\\
+   Default: \> \texttt{(XMIN,XMAX),} if \texttt{DIMENSIONS=2} \\
+            \> \texttt{(XMIN,XMAX,YMIN,YMAX),} if \texttt{DIMENSIONS=3}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{MAX\_POINTS}}
+This parameter specifies the maximum number of total points in the simulation. 
+Ignored if \texttt{ADAPTIVE\_GRID=False}. 
+\begin{keytab}
+   Type:    \> integer \\
+   Default: \> \texttt{10000}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{MAX\_SEGLEN}}
+This parameter specifies the maximum segment length. A point/line is inserted
+when the/any segment length exceeds \texttt{MAX\_SEGLEN} plus a tolerance given
+by \texttt{GRID\_LAZINESS}. A point/line is deleted when the/any segment length
+after deletion falls below \texttt{MAX\_SEGLEN}. The units of
+\texttt{MAX\_SEGLEN} are nm. Ignored if \texttt{ADAPTIVE\_GRID=False}.
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> \texttt{10.}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{MIN\_DELTA}}
+This parameter specifies the minimum grid spacing in x and y. Points/lines are not
+inserted if (any of) the grid spacings would fall below \texttt{MIN\_DELTA}. The
+units of \texttt{MIN\_DELTA} are nm. The parameter is intended to prevent the
+formation of kinks in the contour due to excessive grid refinements. Ignored if
+\texttt{ADAPTIVE\_GRID=False}. If only an x value is specified, the x value is copied 
+and used as the y value.  
+\begin{keytab}
+   Type:    \> tuple (x,y) \\
+   Default: \> \texttt{1.} 
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{TIME\_STEP}}
+This parameter specifies the maximum time step in seconds. The time step may be
+reduced by the program in case of numerical problems or if it would extend over
+the end of a pixel dwell time.
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> required
+\end{keytab}
+\end{keydescription}
+

@@ -1,0 +1,420 @@
+TopSim                                                  Fri Nov 30 12:34:48 2012
+
+Configuration parameters:
+
+[Include]
+INCLUDE_FILE = 'input_3d_ovlp_redep.cfg'
+
+[Setup]
+ANGLE_BISECTOR = False
+DEPOSITION = False
+DIMENSIONS = 3
+ETCHING = False
+INTERPOLATE = True
+ISOTROPIC = False
+REDEP_1 = True
+REDEP_2 = False
+SHADOWING = False
+SPUTTER_2 = False
+SURFACE_TYPE = 'rectilinear'
+
+[Initial Conditions]
+DELTA_X = 10.0
+DELTA_Y = 10.0
+SURFACE_FILE = ''
+XMAX = 35.
+XMIN = -35.
+YMAX = 50.
+YMIN = -20.
+
+[Regions]
+DOMAINS = {'Si': 'everything',
+}
+NUMBER_OF_REGIONS = 1
+PRIMITIVES = {'everything': ('all',()),
+}
+REGIONS = float('-inf'), float('inf')
+
+[Beam]
+CENTER = (0.0, 0.0)
+CURRENT = 2.5e-15
+DIMENSIONS = 2
+DIVERGENCE = (0.0, 0.0)
+ERF_BEAM_WIDTH = (1e-10, 1e-10)
+FWHM = (10.0, 10.0)
+TILT = 0.
+TOTAL_TIME = 100.0
+TYPE = 'Gaussian'
+
+[Scan]
+DWELL_TIME = 1e1
+OVERLAP = True
+OVERLAP_Y = False
+PASSES = 5
+PIXEL_FILE = ''
+PIXEL_SPACING = (20.0, 20.0)
+PIXELS = (1, 2)
+SCAN_WIDTH = (1.0, 1.0)
+TYPE = 'raster'
+Y_OVERSCAN = 0
+
+[Numerics]
+ADAPTIVE_GRID = True
+GRID_LAZINESS = 10.
+GRID_REGIONS = ((-20.,-20.,20.,40.),)    #2D ((minx,maxy),) 3D ((minx,miny,maxx,maxy),)
+MAX_POINTS = 10000000
+MAX_SEGLEN = 5.,5.
+MIN_DELTA = 0.5,0.5
+TIME_STEP = 1.25e-1
+
+[Physics]
+A_PC = 1.0
+BACKSCATTER_ANG_DIST_FILES = ('',)
+BACKSCATTER_YIELD_FILES = ('',)
+D_COEFF = 1.0
+DENSITIES = (50.02,)
+DIFFUSION = False
+F_PC = 1.0
+MATERIAL_NAMES = 'Si',
+N = 1.0 #cos^n alpha (sputtered atoms)
+N_DEP = 0.5
+N_ETCH = 0.5
+N_PC = 17.0
+S = 1.0 #redeposition sticking coefficient
+S_PC = 1.0
+S_YIELD = 0.0
+SPUTTER_ANG_DIST_FILES = ('',)
+SPUTTER_YIELD_FILES = ('gasi30/syield.npz',)
+TABLE_DIRECTORIES = ('',)
+
+[Output]
+DISPLAY_SURFACE = True
+LOG_FILE = True
+SAVE_ALL = False
+SAVE_ANGLES = False
+SAVE_BEAM_FLUXES = False
+SAVE_BINARY = False
+SAVE_FLUXES = False
+SAVE_MATERIAL_NAMES = False
+SAVE_POSITIONS = True
+SAVE_PRECURSOR = False
+SURFACE_FILE = input_3d_ovlp_redep_adapt.srf
+VERBOSE = False
+WRITE_TIME_STEP = 1.E-0
+
+Simulation Output:
+
+time zmin zmax = 0.0 0.0 0.0
+refine at x-indices [3 4 5 6]
+refine at y-indices [1 2 3 4 5 6 7]
+time zmin zmax = 0.0 0.0 0.0
+time zmin zmax = 1.0 -2.78493762411 7.021420617e-07
+refine at x-indices [4 7]
+refine at y-indices [ 3 10]
+refine at x-indices [6 7]
+refine at y-indices [ 5  6  9 10]
+refine at y-indices [ 9 10]
+time zmin zmax = 2.0 -5.56718194532 5.65284819742e-06
+time zmin zmax = 3.0 -8.05502613228 1.58469007561e-05
+time zmin zmax = 4.0 -10.0042085801 3.68034657158e-05
+time zmin zmax = 5.0 -11.6387945724 7.52119453453e-05
+refine at x-indices [ 5 10]
+refine at y-indices [ 4 17]
+time zmin zmax = 6.0 -13.164606627 0.000137504531416
+refine at y-indices [10 13]
+refine at x-indices [ 4 13]
+refine at y-indices [ 3 22]
+refine at y-indices [13 14]
+delete at y-indices [14]
+delete at y-indices [13]
+time zmin zmax = 7.0 -14.7186158605 0.000209877941318
+time zmin zmax = 8.0 -16.2307705703 0.000300802997188
+refine at y-indices [13]
+delete at y-indices [14]
+time zmin zmax = 9.0 -17.6793791438 0.000438928089632
+refine at x-indices [ 3 16]
+refine at x-indices [ 9 12]
+refine at y-indices [ 7 20]
+refine at y-indices [ 2 27]
+refine at y-indices [12 19]
+time zmin zmax = 10.0 -19.0613519381 0.000585030530045
+refine at y-indices [17]
+delete at y-indices [16]
+time zmin zmax = 11.0 -20.4411409098 0.000641928376995
+refine at y-indices [ 6 27]
+refine at x-indices [ 7 16]
+time zmin zmax = 12.0 -21.9189781231 0.000700536970363
+refine at y-indices [ 8 27]
+refine at x-indices [ 9 16]
+refine at y-indices [18]
+delete at y-indices [19]
+time zmin zmax = 13.0 -23.4381776192 0.000761208266909
+time zmin zmax = 14.0 -24.9731303184 0.000827777885191
+refine at y-indices [ 5 32]
+refine at x-indices [ 6 21]
+time zmin zmax = 15.0 -26.4347638826 0.000896332251977
+refine at y-indices [20]
+delete at y-indices [19]
+time zmin zmax = 16.0 -27.8504253518 0.00096712594288
+refine at y-indices [11 28]
+refine at x-indices [12 17]
+time zmin zmax = 17.0 -29.2569756097 0.00103974493667
+refine at y-indices [20]
+delete at y-indices [21]
+time zmin zmax = 18.0 -30.6153058827 0.00111515306401
+refine at x-indices [14 17]
+refine at y-indices [13 28]
+time zmin zmax = 19.0 -31.8983650557 0.0011963662794
+delete at x-indices [13 19]
+delete at y-indices [12 30]
+refine at y-indices [23]
+refine at y-indices [18]
+time zmin zmax = 20.0 -33.1282711406 0.00128333945762
+refine at x-indices [ 4 27]
+refine at y-indices [22]
+delete at y-indices [21]
+refine at y-indices [26]
+delete at y-indices [25]
+time zmin zmax = 21.0 -34.3333970874 0.00136781649054
+refine at y-indices [17]
+delete at y-indices [18]
+refine at y-indices [27 29]
+delete at y-indices [26 29]
+refine at y-indices [14 16]
+delete at y-indices [15 18]
+delete at x-indices [ 3 29]
+refine at y-indices [ 3 40]
+refine at x-indices [15 16]
+delete at x-indices [16]
+delete at y-indices [ 2 42]
+delete at x-indices [15]
+time zmin zmax = 22.0 -34.0505361104 0.000867345467892
+refine at y-indices [18 25]
+delete at y-indices [19 25]
+refine at x-indices [13]
+refine at y-indices [17]
+delete at y-indices [18]
+time zmin zmax = 23.0 -34.6356266847 0.00116153575574
+refine at y-indices [19 24]
+refine at y-indices [18 22]
+delete at y-indices [17 24]
+refine at y-indices [12]
+time zmin zmax = 24.0 -35.2214123596 0.00147489187839
+refine at y-indices [34]
+refine at x-indices [19]
+delete at y-indices [13]
+delete at y-indices [32]
+time zmin zmax = 25.0 -35.8752255507 0.00180898521658
+refine at y-indices [21]
+refine at y-indices [24]
+delete at y-indices [23]
+time zmin zmax = 26.0 -36.5296830636 0.00216138436914
+refine at x-indices [ 5 28]
+refine at x-indices [18]
+refine at y-indices [25]
+delete at x-indices [17]
+delete at y-indices [21 25]
+time zmin zmax = 27.0 -37.012029538 0.00252739231141
+time zmin zmax = 28.0 -37.466088664 0.0029155008847
+refine at y-indices [22 41]
+delete at y-indices [23]
+refine at y-indices [4]
+refine at x-indices [32]
+time zmin zmax = 29.0 -37.9509317898 0.00332118653665
+refine at x-indices [3]
+refine at y-indices [29]
+time zmin zmax = 30.0 -38.506322172 0.0037386534335
+refine at y-indices [18]
+refine at y-indices [25]
+delete at y-indices [24]
+refine at y-indices [34]
+delete at y-indices [33]
+time zmin zmax = 31.0 -39.1119700845 0.00417684716779
+refine at y-indices [15]
+delete at y-indices [16]
+refine at y-indices [35]
+refine at x-indices [18]
+refine at y-indices [14]
+time zmin zmax = 32.0 -39.4232796065 0.0046391043811
+refine at y-indices [25]
+delete at y-indices [26]
+time zmin zmax = 33.0 -40.1039438309 0.00512894786579
+refine at y-indices [ 2 49]
+refine at y-indices [28]
+time zmin zmax = 34.0 -40.9405964902 0.00559547402314
+refine at x-indices [18]
+delete at x-indices [19]
+delete at y-indices [28]
+time zmin zmax = 35.0 -41.3139615917 0.00572982467107
+refine at x-indices [18]
+delete at x-indices [19]
+time zmin zmax = 36.0 -41.6261615581 0.00586540367724
+time zmin zmax = 37.0 -41.9860670012 0.00600216235032
+refine at y-indices [27]
+delete at y-indices [26]
+time zmin zmax = 38.0 -42.4295791955 0.00614008105102
+time zmin zmax = 39.0 -42.8694980716 0.00627959827626
+time zmin zmax = 40.0 -43.3153166967 0.00642091367168
+time zmin zmax = 41.0 -43.7619414431 0.00656396795147
+refine at y-indices [26]
+delete at y-indices [27]
+time zmin zmax = 42.0 -44.2225401109 0.00670874950824
+time zmin zmax = 43.0 -44.6666714517 0.00685519418342
+time zmin zmax = 44.0 -45.0551646079 0.00700343560386
+time zmin zmax = 45.0 -45.4080743958 0.00715350704866
+time zmin zmax = 46.0 -45.7345650235 0.00730543118267
+time zmin zmax = 47.0 -46.2653922983 0.00745919300229
+refine at y-indices [27]
+delete at y-indices [26]
+time zmin zmax = 48.0 -46.7734562168 0.00761483990006
+time zmin zmax = 49.0 -47.218222592 0.00777250672329
+refine at y-indices [18]
+time zmin zmax = 50.0 -47.6151493643 0.0079323877061
+delete at y-indices [18]
+time zmin zmax = 51.0 -47.9623771124 0.00809468667704
+refine at y-indices [18]
+time zmin zmax = 52.0 -48.4256026583 0.00825906565334
+refine at y-indices [36]
+delete at y-indices [18]
+refine at y-indices [28]
+time zmin zmax = 53.0 -49.0212904186 0.00842631816298
+delete at y-indices [36]
+refine at y-indices [26]
+delete at y-indices [27]
+time zmin zmax = 54.0 -49.3114940107 0.00859574271825
+delete at y-indices [28]
+refine at y-indices [35]
+time zmin zmax = 55.0 -49.8617099774 0.00876722849211
+delete at y-indices [35]
+time zmin zmax = 56.0 -50.1605559966 0.00894170200255
+time zmin zmax = 57.0 -50.5878823515 0.00911803706755
+refine at y-indices [27]
+delete at y-indices [26]
+time zmin zmax = 58.0 -50.9941448236 0.00929704089229
+time zmin zmax = 59.0 -51.4251969823 0.00947876944409
+time zmin zmax = 60.0 -51.8516668511 0.00966338218936
+refine at y-indices [28]
+time zmin zmax = 61.0 -52.2247077249 0.0098507587715
+refine at y-indices [18]
+time zmin zmax = 62.0 -52.714354713 0.0100408229074
+refine at y-indices [37]
+time zmin zmax = 63.0 -53.1852219249 0.0102346389729
+delete at y-indices [29]
+refine at x-indices [5]
+refine at x-indices [34]
+time zmin zmax = 64.0 -53.5686217626 0.0104323166009
+refine at y-indices [27]
+delete at y-indices [28]
+delete at y-indices [18 36]
+time zmin zmax = 65.0 -53.9465464202 0.0106283089063
+refine at y-indices [35]
+delete at y-indices [35]
+time zmin zmax = 66.0 -54.4953034458 0.0108282720709
+refine at y-indices [18]
+time zmin zmax = 67.0 -54.3164908622 0.0110306914408
+delete at y-indices [18]
+time zmin zmax = 68.0 -54.5424338935 0.011236458863
+refine at y-indices [35]
+refine at y-indices [18]
+delete at y-indices [18]
+time zmin zmax = 69.0 -54.8814536477 0.0114473361527
+delete at y-indices [35]
+refine at y-indices [27]
+delete at y-indices [26]
+refine at y-indices [4]
+time zmin zmax = 70.0 -55.0118117639 0.011659388324
+refine at y-indices [36]
+refine at y-indices [19]
+delete at y-indices [37]
+time zmin zmax = 71.0 -55.1780203506 0.0118716445924
+delete at y-indices [19]
+time zmin zmax = 72.0 -55.4466705028 0.0120896842139
+refine at x-indices [36]
+delete at x-indices [35 37]
+refine at x-indices [4]
+delete at x-indices [3 5]
+refine at y-indices [50]
+refine at y-indices [36]
+time zmin zmax = 73.0 -55.6790110068 0.0122884742343
+refine at y-indices [29]
+delete at y-indices [37]
+refine at y-indices [19]
+time zmin zmax = 74.0 -56.2393638481 0.0124795071288
+delete at y-indices [ 4 19]
+delete at y-indices [28]
+time zmin zmax = 75.0 -56.7623787364 0.0126723764076
+refine at y-indices [18]
+refine at y-indices [36]
+delete at y-indices [18]
+refine at y-indices [26]
+delete at y-indices [27]
+time zmin zmax = 76.0 -57.0429619276 0.0128685290309
+delete at y-indices [35]
+time zmin zmax = 77.0 -56.5563337595 0.0130696178239
+refine at x-indices [34]
+refine at x-indices [4]
+delete at y-indices [49]
+time zmin zmax = 78.0 -56.1544899613 0.0132684710918
+refine at y-indices [35]
+time zmin zmax = 79.0 -55.8387273384 0.0134680363464
+delete at y-indices [35]
+time zmin zmax = 80.0 -55.8544058226 0.0136696689913
+refine at y-indices [35]
+time zmin zmax = 81.0 -56.0490795025 0.0138740918761
+refine at y-indices [4]
+delete at y-indices [36]
+refine at y-indices [28]
+delete at y-indices [27]
+time zmin zmax = 82.0 -56.0583809907 0.0143160898803
+time zmin zmax = 83.0 -56.0802474585 0.0150586191777
+refine at y-indices [36]
+delete at y-indices [36]
+time zmin zmax = 84.0 -56.1648315759 0.015814986746
+refine at y-indices [19]
+time zmin zmax = 85.0 -56.5572041443 0.0165837181531
+refine at y-indices [51]
+time zmin zmax = 86.0 -56.8975467983 0.017360250712
+refine at y-indices [37]
+delete at y-indices [37]
+time zmin zmax = 87.0 -57.3076512933 0.0181443413788
+delete at y-indices [19]
+delete at y-indices [4]
+refine at y-indices [26]
+delete at y-indices [27]
+time zmin zmax = 88.0 -57.2606185513 0.0189357823613
+time zmin zmax = 89.0 -57.1340457611 0.0197382285009
+time zmin zmax = 90.0 -57.4344439735 0.0205520723835
+refine at y-indices [35]
+time zmin zmax = 91.0 -57.4356035478 0.0213778394412
+delete at y-indices [35]
+time zmin zmax = 92.0 -57.0830245 0.0222153604244
+refine at y-indices [18]
+time zmin zmax = 93.0 -57.3994364802 0.0230633599419
+delete at y-indices [18]
+refine at y-indices [4]
+delete at y-indices [50]
+refine at y-indices [28]
+delete at y-indices [27]
+time zmin zmax = 94.0 -57.6163318321 0.0239242319957
+time zmin zmax = 95.0 -57.300654383 0.0247959374055
+refine at y-indices [36]
+time zmin zmax = 96.0 -57.3345570351 0.0256808271908
+delete at y-indices [36]
+refine at y-indices [3]
+delete at y-indices [2]
+time zmin zmax = 97.0 -57.0164751128 0.0265752601786
+time zmin zmax = 98.0 -57.3272337774 0.0274482824226
+refine at y-indices [50]
+refine at y-indices [19]
+refine at y-indices [37]
+time zmin zmax = 99.0 -57.6721719014 0.0283272938372
+refine at y-indices [54]
+delete at y-indices [55]
+delete at y-indices [19]
+refine at y-indices [27]
+delete at y-indices [28]
+delete at y-indices [36]
+time zmin zmax = 100.0 -58.1029086112 0.0292167104916
+time zmin zmax = 100.0 -58.1029086112 0.0292167104916
+
+CPU time: 914.53

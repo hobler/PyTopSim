@@ -1,0 +1,92 @@
+\begin{keydescription}{\texttt{BACKSCATTER\_ANG\_DIST\_FILES}}
+This parameter specifies the filenames of the angular distribution tables for
+backscattered ions, i.e. the distribution as a function of incidence and
+ejection angle. Actual values of the distribution function are obtained by
+interpolation in the tables. Paths relative to the work
+directory or the physics/tables directory of the code have to be specified. If a
+file is not specified or \texttt{''}, the file name is set to the
+\texttt{TABLE\_DIRECTORY} joined with the file name \texttt{'bang.npz'}.
+\begin{keytab}
+   Type:    \> (character string,) \\
+   Default: \> required if corresponding \texttt{TABLE\_DIRECTORY} is
+               undefined \\ 
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{BACKSCATTER\_YIELD\_FILES}}
+This parameter specifies the filenames of the backscatter yield tables,
+i.e. the backscatter yields as a function of incidence angle. Actual backscatter 
+yields are obtained by interpolation in the tables. Paths relative to the work
+directory or the physics/tables directory of the code have to be specified. If a
+file is not specified or \texttt{''}, the file name is set to the
+\texttt{TABLE\_DIRECTORY} joined with the file name \texttt{'byield.npz'}.
+\begin{keytab}
+   Type:    \> (character string,) \\
+   Default: \> required if corresponding \texttt{TABLE\_DIRECTORY} is
+               undefined
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{DENSITIES}}
+This parameter specifies the atomic density for each material region. If less
+\texttt{DENSITIES} are specified than \texttt{MATERIAL\_NAMES}, the missing
+\texttt{DENSITIES} are assumed to be indentical to the last specified
+\texttt{DENSITY}. The units of \texttt{DENSITIES} are atoms per nm$^3$.
+\begin{keytab}
+   Type:    \> tuple of real \\
+   Default: \> \texttt{(49.94,)}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{MATERIAL\_NAMES}}
+This parameter specifies the material name for each region. 
+\begin{keytab}
+   Type:    \> tuple of character string \\
+   Default: \> \texttt{('Si',)}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{SPUTTER\_ANG\_DIST\_FILES}}
+This parameter specifies the filenames of the angular distribution tables for
+sputtered atoms, i.e. the distribution as a function of incidence and
+ejection angle. Actual values of the distribution function are obtained by
+interpolation in the tables. Paths relative to the work
+directory or the physics/tables directory of the code have to be specified. If a
+\texttt{SPUTTER\_ANG\_DIST\_FILE} is not specified or \texttt{''} and , the file
+name is set to the \texttt{TABLE\_DIRECTORY} joined with the file
+name \texttt{'sang.npz'}. If both \texttt{SPUTTER\_ANG\_DIST\_FILE=''} and
+\texttt{TABLE\_DIRECTORY=''}, a cosine distribution function is used.
+\begin{keytab}
+   Type:    \> (character string,) \\
+   Default: \> required if corresponding \texttt{TABLE\_DIRECTORY} is
+			   undefined 
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{SPUTTER\_YIELD\_FILES}}
+This parameter specifies the filenames of the sputter yield tables, i.e. the
+sputter yields as a function of incidence angle. Actual sputter yields are
+obtained by interpolation in the tables. Paths relative to the work
+directory or the physics/tables directory of the code have to be specified. If a
+file is not specified or \texttt{''}, the file name is set to the table directory
+joined with the file name \texttt{'syield.npz'}.
+\begin{keytab} 
+   Type:    \> (character string,) \\
+   Default: \> required if corresponding \texttt{TABLE\_DIRECTORY} is
+   			   undefined \\ 
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{TABLE\_DIRECTORIES}}
+This parameter specifies the directories for the sputter/backscatter
+yield/angular distribution tables. Paths relative to the work directory or the
+physics/tables directory of the code have to be specified. It is only used, if
+the corresponding table file is unspecified. If less \texttt{TABLE\_DIRECTORIES}
+are specified than  \texttt{MATERIAL\_NAMES}, the missing
+\texttt{TABLE\_DIRECTORIES} are  assumed to be indentical to the last specified
+\texttt{TABLE\_DIRECTORY}. 
+\begin{keytab}
+   Type:    \> (character string,) \\
+   Default: \> \texttt{'',}
+\end{keytab}
+\end{keydescription}

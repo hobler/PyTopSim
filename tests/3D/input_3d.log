@@ -1,0 +1,131 @@
+TopSim                                                  Mon Nov 26 16:14:49 2012
+
+Configuration parameters:
+
+[Include]
+INCLUDE_FILE = ''
+
+[Setup]
+ANGLE_BISECTOR = False
+DEPOSITION = False
+DIMENSIONS = 3
+ETCHING = False
+INTERPOLATE = True
+ISOTROPIC = False
+REDEP_1 = False
+REDEP_2 = False
+SHADOWING = False
+SPUTTER_2 = False
+SURFACE_TYPE = 'rectilinear'
+
+[Initial Conditions]
+DELTA_X = 1.0
+DELTA_Y = 1.0
+SURFACE_FILE = ''
+XMAX = 35.
+XMIN = -35.
+YMAX = 50.
+YMIN = -20.
+
+[Regions]
+DOMAINS = {'Si': 'everything',
+}
+NUMBER_OF_REGIONS = 1
+PRIMITIVES = {'everything': ('all',()),
+}
+REGIONS = float('-inf'), float('inf')
+
+[Beam]
+CENTER = (0.0, 0.0)
+CURRENT = 2.5e-15
+DIMENSIONS = 2
+DIVERGENCE = (0.0, 0.0)
+ERF_BEAM_WIDTH = (1e-10, 1e-10)
+FWHM = (10.0, 10.0)
+TILT = 0.
+TOTAL_TIME = 20.0
+TYPE = 'Gaussian'
+
+[Scan]
+DWELL_TIME = 1e1
+OVERLAP = False
+OVERLAP_Y = False
+PASSES = 1
+PIXEL_FILE = ''
+PIXEL_SPACING = (20.0, 20.0)
+PIXELS = (1, 2)
+SCAN_WIDTH = (1.0, 1.0)
+TYPE = 'raster'
+Y_OVERSCAN = 0
+
+[Numerics]
+ADAPTIVE_GRID = False
+GRID_LAZINESS = 10.
+GRID_REGIONS = ((-500.,-150.,500.,120.),)    #2D ((minx,maxy),) 3D ((minx,miny,maxx,maxy),)
+MAX_POINTS = 10000000
+MAX_SEGLEN = 22.,22.
+MIN_DELTA = 1.0,2.0
+TIME_STEP = 1.25e-1
+
+[Physics]
+A_PC = 1.0
+BACKSCATTER_ANG_DIST_FILES = ('gasi30/bang.npz',)
+BACKSCATTER_YIELD_FILES = ('gasi30/byield.npz',)
+D_COEFF = 1.0
+DENSITIES = (49.94,)
+DIFFUSION = False
+F_PC = 1.0
+MATERIAL_NAMES = 'Si',
+N = 1.0 #cos^n alpha (sputtered atoms)
+N_DEP = 0.5
+N_ETCH = 0.5
+N_PC = 17.0
+S = 1.0 #redeposition sticking coefficient
+S_PC = 1.0
+S_YIELD = 0.0
+SPUTTER_ANG_DIST_FILES = ('gasi30/sang.npz',)
+SPUTTER_YIELD_FILES = ('gasi30/syield.npz',)
+TABLE_DIRECTORIES = ('gasi30',)
+
+[Output]
+DISPLAY_SURFACE = True
+LOG_FILE = True
+SAVE_ALL = False
+SAVE_ANGLES = False
+SAVE_BEAM_FLUXES = False
+SAVE_BINARY = False
+SAVE_FLUXES = False
+SAVE_MATERIAL_NAMES = False
+SAVE_POSITIONS = True
+SAVE_PRECURSOR = False
+SURFACE_FILE = input_3d.srf
+VERBOSE = False
+WRITE_TIME_STEP = 1.E-0
+
+Simulation Output:
+
+time zmin zmax = 0.0 0.0 0.0
+time zmin zmax = 0.0 0.0 0.0
+time zmin zmax = 1.0 -5.5790909602 0.0
+time zmin zmax = 2.0 -11.1581819204 0.0
+time zmin zmax = 3.0 -16.7372728806 0.0
+time zmin zmax = 4.0 -22.3163638408 0.0
+time zmin zmax = 5.0 -27.895454801 0.0
+time zmin zmax = 6.0 -33.4745457612 0.0
+time zmin zmax = 7.0 -39.0536367214 0.0
+time zmin zmax = 8.0 -44.6327276816 0.0
+time zmin zmax = 9.0 -50.2118186418 0.0
+time zmin zmax = 10.0 -55.790909602 0.0
+time zmin zmax = 11.0 -55.790909602 0.0
+time zmin zmax = 12.0 -55.790909602 0.0
+time zmin zmax = 13.0 -55.790909602 0.0
+time zmin zmax = 14.0 -55.790909602 0.0
+time zmin zmax = 15.0 -55.790909602 0.0
+time zmin zmax = 16.0 -55.790909602 0.0
+time zmin zmax = 17.0 -55.790909602 0.0
+time zmin zmax = 18.0 -55.790909602 0.0
+time zmin zmax = 19.0 -56.5477056857 0.0
+time zmin zmax = 20.0 -62.1267222615 0.0
+time zmin zmax = 20.0 -62.1267222615 0.0
+
+CPU time: 6.11

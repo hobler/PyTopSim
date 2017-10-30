@@ -1,0 +1,28 @@
+contour: 0.0 5 bx- x-positions z-positions
+-2.0 0.0
+-1.0 0.0
+0.0 0.0
+1.0 0.0
+2.0 0.0
+end of contour 
+contour: 0.0 5 bx- x-positions z-positions
+-2.0 0.0
+-1.0 0.0
+0.0 0.0
+1.0 0.0
+2.0 0.0
+end of contour 
+contour: 0.004 5 bx- x-positions z-positions
+-2.0 -5.22609000304e-05
+-1.0 -0.000418087249062
+0.0 -0.000836177172235
+1.0 -0.000418087249062
+2.0 -5.22609000304e-05
+end of contour 
+contour: 0.004 5 bx- x-positions z-positions
+-2.0 -5.22609000304e-05
+-1.0 -0.000418087249062
+0.0 -0.000836177172235
+1.0 -0.000418087249062
+2.0 -5.22609000304e-05
+end of contour 

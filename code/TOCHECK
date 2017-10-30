@@ -1,0 +1,6 @@
+- z-axis limit in 3d plot
+
+- Occasional "random" crashes (-> Sloan)
+
+- does simulation stop prematurely if last time step (i.e. time step exceeding total simulation  
+  time) is reduced such that reduced time step does not exceed total simulation time?

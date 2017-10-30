@@ -1,0 +1,8 @@
+contour: 0.0 6 bx- x-positions z-positions
+ -30.0 30.0
+ -10.1 30.0
+ -10.0  0.0
+  10.0  0.0
+  10.1 30.0
+  30.0 30.0
+end of contour

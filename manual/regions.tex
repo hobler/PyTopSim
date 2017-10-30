@@ -1,0 +1,45 @@
+Regions define the geometry of spatial domains for the definition of material
+properties (see the \texttt{Physics]} section).
+
+\begin{keydescription}{\texttt{NUMBER\_OF\_REGIONS}}
+This parameter specifies the number of regions. (soon to be depreciated)
+\begin{keytab}
+   Type:    \> integer \\
+   Default: \> required
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{REGIONS}}
+This parameter specifies the boundaries of the regions. (not yet used). [This has been replaced 
+in 2D by the concept of primitives and domains]
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> \texttt{($-\infty$,$\infty$)}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{DOMAINS}}
+This parameter specifies a dictionary that is used to define combinations of primitives. 
+Currently the only Domains that can be used are material domains. The indexed order of the 
+material names is specified with the \texttt{Physics.MATERIAL\_NAMES} parameter. Each entry to 
+the dictionary is made up of two strings: the key, and the equation. The key is the name of the 
+Domain, this name should match one of the materials used in  \texttt{Physics.MATERIAL\_NAMES}, 
+unmatched keys will be ignored. The equation instructs the simulator on how to combine spatial primitives. Equations have two operations +(plus) and -(minus), plus indicates the union of two 
+spatial primitives, minus indicates the subtraction of the second primitive from the first. All 
+domain equations are evaluated from left to right such that a+b-c = (a+b)-c, the leading 
+operator is assumed to be positive and any attempt to use unary operators will result in an 
+error. These operations (+/-) operate on spatial primitives as defined by their keys, 
+the spatial primitives are specified with the \texttt{PRIMITIVES} parameter.  
+\begin{keytab}
+   Type:    \> dictionary \\
+   Default: \> \texttt{($-\infty$,$\infty$)}
+\end{keytab}
+\end{keydescription}
+
+\begin{keydescription}{\texttt{PRIMITIVES}}
+This parameter specifies the spatial primitives used in the simulation. Format: key: primitive-parameters.
+\begin{keytab}
+   Type:    \> real \\
+   Default: \> \texttt{($-\infty$,$\infty$)}
+\end{keytab}
+\end{keydescription}

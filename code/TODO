@@ -1,0 +1,50 @@
+NOTE: Items with the "=" bullet are more likely to be realized in the near future
+
+User interface
+= Let key "*" of DOMAIN refer to the first defined MATERIAL_NAME and set this as default 
+- 3D plotting (matplotlib or MayaVi)
+- GUI with Qt
+
+Numerical model
+= visibility of beam
+- general visibility of point pairs
+- calculate flux through segments and interpolate to nodes (?)
+- adaptive grid resolving redeposition/non-local sputtering flux
+
+Higher order surface advancement algorithm
+= fully integrate in TopSim (use common features)
+- compare with angle-bisector and back-interpolation model
+- assess gain in computational efficiency
+
+New features
+= numerically defined angular and spatial distribution of beam
+= multiple materials
+- cylinder symmetry
+- gas flow model
+- periodic "boundary conditions"
+
+Inverse Modeling
+- subsequent box mills
+- variable dwell time (same for all passes)
+- variable dwell time (intermediate surfaces specified)
+- hierarchical approach using local relationships of dwell times of neighboring pixels
+
+2D/3D models based on Monte Carlo results 
+- generate more tables (Ga, Ar, different energies) for yield and angular dependence of 
+  sputtered atoms, and yield and angular dependence of backscattered ions
+- consider implanted ions (dynamic equilibrium)
+- spatial distribution of sputtered atoms (i.e. nonlocal sputtering model) 
+
+Etching/deposition with precursor diffusion
+- Fix bug in 3D precursor diffusion
+- Testing (compare with analytical solution, ...)
+- Take change of cell area into account
+- continuity of precursor in elements *between* nodes instead of *at* nodes (?) 
+
+Experimental verification:
+- Kim
+- Diss Christoph
+- Circular holes (photonic crystals)
+- our milled/etched 2D/3D trenches (Simon)
+- verify inverse modeling
+
