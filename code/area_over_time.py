@@ -1,5 +1,7 @@
 """
 Plot the area/volume added to the target.
+
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
 """
 import sys
 

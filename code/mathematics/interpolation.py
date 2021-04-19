@@ -1,8 +1,7 @@
-'''
-Created on 15.02.2010
-
-@author: Thomas Zahel
-'''
+"""
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Thomas Zahel
+"""
 
 from scipy import interpolate   
 import numpy as np

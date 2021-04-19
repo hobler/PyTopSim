@@ -1,8 +1,6 @@
-'''
-Created on 05.10.2011
-
-@author: Gerhard Hobler
-'''
+"""
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+"""
 
 from scipy.interpolate import splev
 from scipy.interpolate.dfitpack import bispeu

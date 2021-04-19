@@ -1,7 +1,7 @@
-'''
-Created on 19.02.2010
-
-@author: thomas
+"""
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Thomas Zahel
+"""
 '''
 
 class CrossedPointsError(Exception):

@@ -1,7 +1,4 @@
 """
-Created: Nov 17, 2011
-@author: Sloan Lindsey
-
 Rounded Box Primitive:
 A primitive that generates a box with rounded corners. The box is orriented with the axis and is defined by:
 xrange: (xlow,xhigh)
@@ -14,7 +11,8 @@ A sphere can be produced by setting xlow=xhigh, ylow=yhigh, zlow=zhigh
 A cylinder with rounded edges is produced by defining a line
 A cylinder without rounded ends must be produced through binary operations 
     
-
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Sloan Lindsey
 """
 import numpy as np
 from multiprocessing import Pool

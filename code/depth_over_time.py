@@ -1,5 +1,7 @@
 """
 Plot the maximum depth as a function of time.
+
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
 """
 import sys
 

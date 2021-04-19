@@ -1,8 +1,7 @@
-'''
-Created on Nov 12, 2009
-
-@author: Thomas Zahel    
-'''
+"""
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Thomas Zahel
+"""
 
 from physics.sputtering import read_sputter_yield_tables
 from physics.sputtering import read_sputter_angular_dist_tables

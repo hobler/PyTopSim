@@ -15,6 +15,8 @@ and
     c_2 = c_2(theta)
 
 approximated by piecewise polynomials.
+
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
 """
 
 import os

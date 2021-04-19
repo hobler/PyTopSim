@@ -1,7 +1,4 @@
 """
-Created: Nov 17, 2011
-@author: Sloan Lindsey
-
 The Material Domain Object:
 Returns a boolean for each position, true indicates the position is in the interrogated domain.
 Each domain has a name and an equation defined by additions and subtractions of primitives. Domain equations are evaluated left to right and MUST start with a positive domain, symbols in the domain equations refer to 
@@ -10,7 +7,8 @@ keys defined in par.PRIMITIVES.
 Domains are normally initialized with thier domain equation, the materials domain, knows all the primitives
 through the use of par.PRIMITIVES. 
     
-
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Sloan Lindsey
 """
 
 import IO.parameters as par

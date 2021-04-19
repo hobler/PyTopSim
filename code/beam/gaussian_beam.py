@@ -1,8 +1,6 @@
-'''
-Created on Sep 3, 2010
-
-@author: hobler
-'''
+"""
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+"""
 
 import numpy as np
 from math import pi, sqrt, log

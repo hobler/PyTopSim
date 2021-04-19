@@ -12,7 +12,7 @@ Numerical model
 - adaptive grid resolving redeposition/non-local sputtering flux
 
 Higher order surface advancement algorithm
-= fully integrate in TopSim (use common features)
+= fully integrate in PyTopSim (use common features)
 - compare with angle-bisector and back-interpolation model
 - assess gain in computational efficiency
 

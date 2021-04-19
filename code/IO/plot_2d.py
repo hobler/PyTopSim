@@ -1,8 +1,7 @@
-'''
-Created on 17.02.2010
-
-@author: thomas
-'''
+"""
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Thomas Zahel
+"""
 
 doc_string = """
  key   action

@@ -1,7 +1,4 @@
 """
-Created: Nov 17, 2011
-@author: Sloan Lindsey
-
 The Materials Tracker:
 Returns the index of the material for each position. Index coresponds to the material index in par.MATERIALS_NAMES.
 Evaluated in order of materials list  with priority to the higher index in case of space conflicts.
@@ -10,7 +7,8 @@ a name and an equation defined by additions and subtractions of primitives. Doma
 evaluated left to right and MUST start with a positive domain, symbols in the domain equations refer to 
 keys defined in par.PRIMITIVES. 
     
-
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Sloan Lindsey
 """
 
 

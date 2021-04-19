@@ -1,8 +1,6 @@
-'''
-Created on Sep 2, 2010
-
-@author: hobler
-'''
+"""
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+"""
 
 import sys
 

@@ -1,8 +1,7 @@
-'''
-Created Oct 5, 2011
-
-@author: Sloan
-'''
+"""
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Sloan Lindsey
+"""
 
 import numpy as np
 import IO.parameters as par

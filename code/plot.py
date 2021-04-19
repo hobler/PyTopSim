@@ -1,3 +1,6 @@
+"""
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+"""
 import sys
 
 import IO.parameters as par

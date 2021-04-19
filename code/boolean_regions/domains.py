@@ -1,11 +1,9 @@
 """
-Created: Nov 17, 2011
-@author: Sloan Lindsey
-
 Domain Object:
 A wrapper for primitives, also keeps track of the sign of the primitive.  
     
-
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Sloan Lindsey
 """
 import numpy as np
 from prim_boxr import BoxRounded3d

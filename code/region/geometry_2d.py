@@ -1,7 +1,6 @@
 """
-Created on Dec 9, 2009
-
-@author: Thomas Zahel
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Thomas Zahel
 """
 
 # regions are presently static and between fixed z values

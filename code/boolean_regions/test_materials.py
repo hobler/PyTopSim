@@ -1,3 +1,7 @@
+"""
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Sloan Lindsey
+"""
 import numpy as np
 from materials_tracker import Materials_Tracker
 

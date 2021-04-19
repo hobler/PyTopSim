@@ -1,7 +1,7 @@
 '''
 Created on Nov 11, 2009
 
-usage: python TopSim.py configfile
+usage: python PyTopSim.py configfile
 
 @author: Thomas Zahel
 '''

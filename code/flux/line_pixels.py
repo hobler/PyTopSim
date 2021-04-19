@@ -1,6 +1,8 @@
-'''
+"""
 This module is intended for visibility checks, but is unused at the moment.
-'''
+
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+"""
 
 
 from math import floor

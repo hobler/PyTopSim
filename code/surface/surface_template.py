@@ -1,7 +1,6 @@
 """
-Created on Nov 13, 2009
-
-@author: thomas
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Thomas Zahel
 """
 
 

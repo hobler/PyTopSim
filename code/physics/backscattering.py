@@ -1,7 +1,6 @@
 """
-Created on Dec 10, 2009
-
-@author: Thomas Zahel
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Thomas Zahel
 """
 import os
 import numpy as np

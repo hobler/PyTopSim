@@ -1,8 +1,8 @@
-'''
+"""
 Created on Sep 9, 2010
 
-@author: hobler
-'''
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+"""
 
 #BEAM TYPE 3 as of 9/3/2011
 

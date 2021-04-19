@@ -2,10 +2,9 @@
 Read default and user config file, perform various checks on the data, and set the variables
 in the parameters module.
 
-Created on 2009.11.27
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Thomas Zahel
 CHANGE 2011.09.20: deepcopy removed to fix bug with python 2.7, Sloan
-
-@author: Thomas
 """
 
 import sys

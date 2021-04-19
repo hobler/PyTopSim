@@ -1,11 +1,17 @@
+"""
+Update the working directory.
+
+This script is used to keep the code of different branches apart. It is
+recommended to put input and output files under a subdirectory of root_dir.
+
+Copyright (C) 2021 Gerhard Hobler  (license: GPLv3 or higher)
+"""
 import os
 import shutil
 import subprocess
 
-# These parameters need to be adapted if the script is used for e different
-# program:
 ########################################################################
-program = 'topsim'        # name of the program
+program = 'pytopsim'        # name of the program
 ########################################################################
 # This parameter determines where the program is built:
 ########################################################################

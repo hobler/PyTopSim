@@ -1,8 +1,7 @@
-'''
-Created on Nov 16, 2009
-
-@author: thomas
-'''
+"""
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Thomas Zahel
+"""
 
 import IO.parameters as par
 

@@ -1,11 +1,9 @@
 """
-Created: Nov 17, 2011
-@author: Sloan Lindsey
-
 All Space Primitive:
 A simple primitive that returns True for all space, takes no parameters.   
     
-
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Sloan Lindsey
 """
 
 import numpy as np

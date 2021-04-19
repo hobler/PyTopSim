@@ -1,8 +1,7 @@
-'''
-Created on 23.03.2010
-
-@author: thomas
-'''
+"""
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Thomas Zahel
+"""
 import numpy as np
 
 #TOCHECK pass array or x and z components

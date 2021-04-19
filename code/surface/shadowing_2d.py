@@ -1,3 +1,6 @@
+"""
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+"""
 import numpy as np
 from scipy import interpolate
 import matplotlib.pyplot as plt

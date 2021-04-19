@@ -1,8 +1,7 @@
-'''
-Created on Nov 11, 2009
-
-@author: Thomas Zahel
-'''
+"""
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Thomas Zahel
+"""
 
 import numpy as np
 from copy import copy

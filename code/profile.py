@@ -1,12 +1,11 @@
-'''
-Created on 08.06.2010
-
-@author: thomas
-
+"""
 Usage: python profile.py configfile
-'''
 
-from TopSim import main  
+Copyright (C) 2021 Gerhard Hobler  (License: GPLv3 or higher)
+Contributions by Thomas Zahel
+"""
+
+from PyTopSim import main
 import cProfile
 
 
